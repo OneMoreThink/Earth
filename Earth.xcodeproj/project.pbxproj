@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050BC22D2B0497D900A33AFF /* WelcomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC22C2B0497D900A33AFF /* WelcomView.swift */; };
+		050BC22F2B04994600A33AFF /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC22E2B04994600A33AFF /* NameView.swift */; };
+		050BC2312B04996D00A33AFF /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2302B04996D00A33AFF /* DateView.swift */; };
+		050BC2332B049D1300A33AFF /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2322B049D1300A33AFF /* PictureView.swift */; };
+		050BC2352B049F6100A33AFF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2342B049F6100A33AFF /* Onboarding.swift */; };
 		058324942B032DFA00E577A8 /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058324932B032DFA00E577A8 /* EarthApp.swift */; };
-		058324962B032DFA00E577A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058324952B032DFA00E577A8 /* ContentView.swift */; };
 		058324982B032DFD00E577A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058324972B032DFD00E577A8 /* Assets.xcassets */; };
 		0583249B2B032DFD00E577A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */; };
+		05AC12542B03495A0042A117 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12532B03495A0042A117 /* HomeView.swift */; };
+		05AC12562B034A5C0042A117 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12552B034A5C0042A117 /* WalkthroughView.swift */; };
+		05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12572B0356AC0042A117 /* OnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050BC22C2B0497D900A33AFF /* WelcomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomView.swift; sourceTree = "<group>"; };
+		050BC22E2B04994600A33AFF /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		050BC2302B04996D00A33AFF /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		050BC2322B049D1300A33AFF /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		050BC2342B049F6100A33AFF /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		058324902B032DFA00E577A8 /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		058324932B032DFA00E577A8 /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
-		058324952B032DFA00E577A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		058324972B032DFD00E577A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05AC12532B03495A0042A117 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		05AC12552B034A5C0042A117 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		05AC12572B0356AC0042A117 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				058324932B032DFA00E577A8 /* EarthApp.swift */,
-				058324952B032DFA00E577A8 /* ContentView.swift */,
+				05AC12522B0347590042A117 /* Models */,
+				05AC12512B03474A0042A117 /* Views */,
 				058324972B032DFD00E577A8 /* Assets.xcassets */,
 				058324992B032DFD00E577A8 /* Preview Content */,
 			);
@@ -65,6 +80,36 @@
 				0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		05AC12512B03474A0042A117 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05AC12532B03495A0042A117 /* HomeView.swift */,
+				05EAAF192B03C449004DD93C /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		05AC12522B0347590042A117 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		05EAAF192B03C449004DD93C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				050BC2342B049F6100A33AFF /* Onboarding.swift */,
+				05AC12572B0356AC0042A117 /* OnBoardingView.swift */,
+				050BC22C2B0497D900A33AFF /* WelcomView.swift */,
+				050BC22E2B04994600A33AFF /* NameView.swift */,
+				050BC2302B04996D00A33AFF /* DateView.swift */,
+				050BC2322B049D1300A33AFF /* PictureView.swift */,
+				05AC12552B034A5C0042A117 /* WalkthroughView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058324962B032DFA00E577A8 /* ContentView.swift in Sources */,
+				050BC2352B049F6100A33AFF /* Onboarding.swift in Sources */,
+				05AC12542B03495A0042A117 /* HomeView.swift in Sources */,
+				05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */,
+				050BC2312B04996D00A33AFF /* DateView.swift in Sources */,
+				050BC2332B049D1300A33AFF /* PictureView.swift in Sources */,
 				058324942B032DFA00E577A8 /* EarthApp.swift in Sources */,
+				050BC22D2B0497D900A33AFF /* WelcomView.swift in Sources */,
+				05AC12562B034A5C0042A117 /* WalkthroughView.swift in Sources */,
+				050BC22F2B04994600A33AFF /* NameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +331,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,9 +339,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.Earth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,6 +363,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.Earth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

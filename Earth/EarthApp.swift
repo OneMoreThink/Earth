@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct EarthApp: App {
+    
+    @AppStorage("onboardDone") var onboardDone : Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if onboardDone{
+                HomeView()
+            } else {
+                OnBoardingView()
+            }
         }
     }
 }
