@@ -13,7 +13,7 @@ struct WalkthroughView<Content:View>: View {
     @Binding var isNext : Bool
     let content: Content
     
-    let backgroundColor = LinearGradient(gradient: Gradient(colors: [.blue.opacity(0.2), .purple.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
+    let backgroundColor = LinearGradient(gradient: Gradient(colors: [.green.opacity(0.2), .green.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
     
     init(onboardingState: Binding<Onboarding> , isNext: Binding<Bool>, @ViewBuilder content: () -> Content) {
         self._onboardingState = onboardingState

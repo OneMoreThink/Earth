@@ -22,11 +22,13 @@ struct OnBoardingView: View {
             case .name:
                 NameView(onboardingState: $onboardingState)
             case .birth:
-                DateView(onboardingState: $onboardingState)
+                BirthView(onboardingState: $onboardingState)
             case .end:
-                DateView(onboardingState: $onboardingState)
+                EndView(onboardingState: $onboardingState)
             case .picture:
                 PictureView(onboardingState: $onboardingState)
+            case .thanks:
+                ThanksView()
             }
             
         }

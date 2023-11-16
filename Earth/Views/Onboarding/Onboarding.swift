@@ -13,6 +13,7 @@ enum Onboarding: String, CaseIterable {
     case birth
     case end
     case picture
+    case thanks
     
     var progress: Double {
         switch self{
@@ -26,6 +27,8 @@ enum Onboarding: String, CaseIterable {
             return 0.6
         case .picture:
             return 0.8
+        case .thanks:
+            return 1.0
         }
     }
     

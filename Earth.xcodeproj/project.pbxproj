@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		050BC22D2B0497D900A33AFF /* WelcomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC22C2B0497D900A33AFF /* WelcomView.swift */; };
 		050BC22F2B04994600A33AFF /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC22E2B04994600A33AFF /* NameView.swift */; };
-		050BC2312B04996D00A33AFF /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2302B04996D00A33AFF /* DateView.swift */; };
+		050BC2312B04996D00A33AFF /* BirthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2302B04996D00A33AFF /* BirthView.swift */; };
 		050BC2332B049D1300A33AFF /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2322B049D1300A33AFF /* PictureView.swift */; };
 		050BC2352B049F6100A33AFF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2342B049F6100A33AFF /* Onboarding.swift */; };
 		056F1B772B05B8E500758766 /* QuestionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F1B762B05B8E500758766 /* QuestionForm.swift */; };
+		056F1B792B05F68A00758766 /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F1B782B05F68A00758766 /* EndView.swift */; };
+		056F1B7B2B06609400758766 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F1B7A2B06609400758766 /* ThanksView.swift */; };
 		058324942B032DFA00E577A8 /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058324932B032DFA00E577A8 /* EarthApp.swift */; };
 		058324982B032DFD00E577A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058324972B032DFD00E577A8 /* Assets.xcassets */; };
 		0583249B2B032DFD00E577A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */; };
@@ -24,10 +26,12 @@
 /* Begin PBXFileReference section */
 		050BC22C2B0497D900A33AFF /* WelcomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomView.swift; sourceTree = "<group>"; };
 		050BC22E2B04994600A33AFF /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
-		050BC2302B04996D00A33AFF /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		050BC2302B04996D00A33AFF /* BirthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthView.swift; sourceTree = "<group>"; };
 		050BC2322B049D1300A33AFF /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		050BC2342B049F6100A33AFF /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		056F1B762B05B8E500758766 /* QuestionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionForm.swift; sourceTree = "<group>"; };
+		056F1B782B05F68A00758766 /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
+		056F1B7A2B06609400758766 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
 		058324902B032DFA00E577A8 /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		058324932B032DFA00E577A8 /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
 		058324972B032DFD00E577A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,8 +111,10 @@
 				05AC12572B0356AC0042A117 /* OnBoardingView.swift */,
 				050BC22C2B0497D900A33AFF /* WelcomView.swift */,
 				050BC22E2B04994600A33AFF /* NameView.swift */,
-				050BC2302B04996D00A33AFF /* DateView.swift */,
+				050BC2302B04996D00A33AFF /* BirthView.swift */,
+				056F1B782B05F68A00758766 /* EndView.swift */,
 				050BC2322B049D1300A33AFF /* PictureView.swift */,
+				056F1B7A2B06609400758766 /* ThanksView.swift */,
 				05AC12552B034A5C0042A117 /* WalkthroughView.swift */,
 				056F1B762B05B8E500758766 /* QuestionForm.swift */,
 			);
@@ -185,16 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056F1B792B05F68A00758766 /* EndView.swift in Sources */,
 				050BC2352B049F6100A33AFF /* Onboarding.swift in Sources */,
 				05AC12542B03495A0042A117 /* HomeView.swift in Sources */,
 				05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */,
-				050BC2312B04996D00A33AFF /* DateView.swift in Sources */,
+				050BC2312B04996D00A33AFF /* BirthView.swift in Sources */,
 				050BC2332B049D1300A33AFF /* PictureView.swift in Sources */,
 				058324942B032DFA00E577A8 /* EarthApp.swift in Sources */,
 				050BC22D2B0497D900A33AFF /* WelcomView.swift in Sources */,
 				056F1B772B05B8E500758766 /* QuestionForm.swift in Sources */,
 				05AC12562B034A5C0042A117 /* WalkthroughView.swift in Sources */,
 				050BC22F2B04994600A33AFF /* NameView.swift in Sources */,
+				056F1B7B2B06609400758766 /* ThanksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

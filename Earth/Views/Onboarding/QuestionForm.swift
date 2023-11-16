@@ -17,9 +17,11 @@ struct QuestionForm: View {
                 Image("onboarder")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 120,height: 120)
+                    .frame(width: 100,height: 100)
                     .background(.white.opacity(0.5))
                     .clipShape(Circle())
+                    .padding(.top, 30)
+                    .padding(.leading,10)
                 Spacer(minLength: 5)
                 
             }

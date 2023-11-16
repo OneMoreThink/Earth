@@ -19,6 +19,7 @@ struct NameView: View {
         WalkthroughView(onboardingState: $onboardingState,isNext: $isNext){
             VStack(spacing: 20){
                 
+                
                     QuestionForm(question: "당신의 이름을 알려주세요")
                     
                     Spacer()
@@ -29,9 +30,14 @@ struct NameView: View {
                         .padding(.horizontal)
                         .frame(height: 150)
                         .background(
-                            RoundedRectangle(cornerRadius: 25.0)
-                                .fill(.white)
-                    )
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.white.opacity(0.5))
+                                .shadow(radius: 30, x: 0, y: 20)
+                                .padding(-30)
+                                .padding(.horizontal)
+                            
+                        )
+                        .padding(.horizontal, 20)
                 }
                 .offset(y: -keyboardHight/2)
                 .animation(.spring(), value: keyboardHight)
