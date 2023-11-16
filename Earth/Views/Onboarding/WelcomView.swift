@@ -10,9 +10,10 @@ import SwiftUI
 struct WelcomView: View {
     
     @Binding var onboardingState: Onboarding
+    @State var isNext = true
     
     var body: some View {
-        WalkthroughView(onboardingState: $onboardingState){
+        WalkthroughView(onboardingState: $onboardingState, isNext: $isNext){
            
             
             VStack(spacing: 20){
@@ -52,7 +53,6 @@ struct WelcomView: View {
                 }
                 .padding()
                 
-            
             
         }
     }

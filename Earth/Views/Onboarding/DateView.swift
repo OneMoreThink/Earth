@@ -10,38 +10,13 @@ import SwiftUI
 struct DateView: View {
     
     @Binding var onboardingState: Onboarding
+    @State var isNext = false
     
     var body: some View {
-        WalkthroughView(onboardingState: $onboardingState){
+        WalkthroughView(onboardingState: $onboardingState, isNext: $isNext){
             VStack(spacing: 20){
                 
-                Spacer(minLength: 10)
-                
-                Image("onboarder")
-                    .resizable()
-                    .frame(height: 400)
-                    .aspectRatio(contentMode: .fit)
-                    .padding(30)
-                    .padding(.bottom, 10)
-                
-                
-                
-                Text("이름이 뭐에요")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .kerning(1.3)
-                    .lineSpacing(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.white.opacity(0.5))
-                            .shadow(radius: 30, x: 0, y: 20)
-                            .padding(-20)
-                            .padding(.horizontal)
-                        
-                    )
-                
+                QuestionForm(question: "언제 태어나셨나요?")
                 Spacer()
                 
                 // Minimum spacing when phone is reducing

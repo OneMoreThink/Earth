@@ -10,9 +10,10 @@ import SwiftUI
 struct PictureView: View {
     
     @Binding var onboardingState: Onboarding
+    @State var isNext = false
     
     var body: some View {
-        WalkthroughView(onboardingState: $onboardingState){
+        WalkthroughView(onboardingState: $onboardingState, isNext: $isNext){
             VStack(spacing: 20){
                 
                 Spacer(minLength: 10)
