@@ -52,6 +52,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052226B62B079EE80052BA05 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		058324872B032DFA00E577A8 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +81,7 @@
 				058324932B032DFA00E577A8 /* EarthApp.swift */,
 				05AC12522B0347590042A117 /* Models */,
 				05AC12512B03474A0042A117 /* Views */,
+				052226B62B079EE80052BA05 /* Managers */,
 				058324972B032DFD00E577A8 /* Assets.xcassets */,
 				058324992B032DFD00E577A8 /* Preview Content */,
 			);
@@ -338,6 +346,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Earth/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permissions for taking photos and videos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Album permissions to save photos and videos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -370,6 +380,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Earth/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permissions for taking photos and videos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Album permissions to save photos and videos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

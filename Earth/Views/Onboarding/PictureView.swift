@@ -16,37 +16,19 @@ struct PictureView: View {
         WalkthroughView(onboardingState: $onboardingState, isNext: $isNext){
             VStack(spacing: 20){
                 
-                Spacer(minLength: 10)
-                
-                Image("onboarder")
-                    .resizable()
-                    .frame(height: 400)
-                    .aspectRatio(contentMode: .fit)
-                    .padding(30)
-                    .padding(.bottom, 10)
+               QuestionForm(question: "마지막으로 당신의 멋진 모습 보여주세요😀")
                 
                 
                 
-                Text("이름이 뭐에요")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .kerning(1.3)
-                    .lineSpacing(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.white.opacity(0.5))
-                            .shadow(radius: 30, x: 0, y: 20)
-                            .padding(-20)
-                            .padding(.horizontal)
-                        
-                    )
                 
-                Spacer()
+                
+                
+                
+                
                 
                 // Minimum spacing when phone is reducing
                 Spacer(minLength: 30)
+                
                 
             }
             .padding()
