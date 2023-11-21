@@ -21,6 +21,8 @@
 		05AC12542B03495A0042A117 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12532B03495A0042A117 /* HomeView.swift */; };
 		05AC12562B034A5C0042A117 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12552B034A5C0042A117 /* WalkthroughView.swift */; };
 		05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12572B0356AC0042A117 /* OnBoardingView.swift */; };
+		05EB827C2B0C6E8C00BC8CDE /* PermissionsManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB827B2B0C6E8C00BC8CDE /* PermissionsManagers.swift */; };
+		05EB827E2B0C73AE00BC8CDE /* FileManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB827D2B0C73AE00BC8CDE /* FileManagers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		05AC12532B03495A0042A117 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		05AC12552B034A5C0042A117 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 		05AC12572B0356AC0042A117 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		05EB827B2B0C6E8C00BC8CDE /* PermissionsManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManagers.swift; sourceTree = "<group>"; };
+		05EB827D2B0C73AE00BC8CDE /* FileManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 		052226B62B079EE80052BA05 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				05EB827B2B0C6E8C00BC8CDE /* PermissionsManagers.swift */,
+				05EB827D2B0C73AE00BC8CDE /* FileManagers.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -202,7 +208,9 @@
 				056F1B792B05F68A00758766 /* EndView.swift in Sources */,
 				050BC2352B049F6100A33AFF /* Onboarding.swift in Sources */,
 				05AC12542B03495A0042A117 /* HomeView.swift in Sources */,
+				05EB827E2B0C73AE00BC8CDE /* FileManagers.swift in Sources */,
 				05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */,
+				05EB827C2B0C6E8C00BC8CDE /* PermissionsManagers.swift in Sources */,
 				050BC2312B04996D00A33AFF /* BirthView.swift in Sources */,
 				050BC2332B049D1300A33AFF /* PictureView.swift in Sources */,
 				058324942B032DFA00E577A8 /* EarthApp.swift in Sources */,
