@@ -19,44 +19,7 @@ struct ThanksView: View {
        
         ZStack{
             VStack{
-                VStack{
-                    
-                   
-                    
-                    HStack{
-                        Image("onboarder")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100,height: 100)
-                            .background(.white.opacity(0.5))
-                            .clipShape(Circle())
-                            .padding(.top, 30)
-                            .padding(.leading,10)
-                        Spacer(minLength: 5)
-                        
-                    }
-                    .padding(.bottom, 35)
-                    
-                    Text("여행증 발급이 완료되었어요 \n 지구에서 즐거운 시간 보내세요")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .kerning(1.2)
-                        .lineSpacing(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(.white.opacity(0.5))
-                                .shadow(radius: 30, x: 0, y: 20)
-                                .padding(.horizontal, -8)
-                                .padding(.horizontal)
-                                
-                            
-                        )
-                        
-                }
-                    
-                 
+                Spacer()
                 
                 VStack(spacing: 8){
                     
@@ -71,7 +34,8 @@ struct ThanksView: View {
                         
                     }
                     
-                    HStack(spacing: 30){
+                    HStack(spacing: 20){
+                        
                         Image("onboarder")
                             .resizable()
                             .scaledToFit()
@@ -91,10 +55,7 @@ struct ThanksView: View {
                             
                             
                     }
-                    .padding()
-                    
-                    
-        
+                    .padding(25)
                     
                     VStack(spacing: 20){
                         Text(" 여행 시작일: 1998. 03. 31 ")
@@ -106,17 +67,7 @@ struct ThanksView: View {
                             .bold()
                     }
                     .padding(20)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.white.opacity(0.3))
-                            .shadow(radius: 10, x: 0, y: 10)
-                            .padding(.horizontal, -8)
-                            .padding(.horizontal)
-                            
-                        
-                    )
-                    
-                    
+    
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 10)
@@ -126,14 +77,24 @@ struct ThanksView: View {
                         .padding(.horizontal,30)
                     
                 )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(.white.opacity(0.4), lineWidth: 5)
+                        .padding(-30)
+                        .padding(.horizontal,30)
+                )
                 .padding()
-                .offset(y: 30)
-
+                .offset(y: -60)
                 
-                
-                
-                
+                Text("지구에서는 또 어떤 일들이 생길까요?\n 행복한 여행 되세요 😘")
+                    .font(.title2)
+                    .bold()
+                    .kerning(1.4)
+                    .lineSpacing(20)
+                    .multilineTextAlignment(.center)
+                   
                 Spacer()
+                
             }
             
             
