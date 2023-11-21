@@ -28,7 +28,7 @@ struct WelcomView: View {
                         .padding(.bottom, 10)
                         
                     
-                    Text("새로운 여행🚀 출발 전에 몇가지만 알려주시겠어요?")
+                    Text("새로운 여행 출발 전에 몇가지만 알려주시겠어요?")
                         .font(.title)
                         .fontWeight(.bold)
                         .kerning(1.3)

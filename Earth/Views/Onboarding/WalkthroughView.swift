@@ -63,6 +63,7 @@ extension WalkthroughView {
                     }
                     .padding(-15)
                 )
+                .offset(y: -30)
             
         })
     }
