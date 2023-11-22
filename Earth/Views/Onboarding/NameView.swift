@@ -39,10 +39,13 @@ struct NameView: View {
                         )
                         .padding(.horizontal, 20)
                 }
-                .offset(y: -keyboardHight/2)
+                .offset(y: -safeDivision(numerator: keyboardHight, denominator: 2))
                 .animation(.spring(), value: keyboardHight)
                 .onAppear{
                     self.startListeningToKeyboardEvents()
+                }
+                .onDisappear{
+                    NotificationCenter.default.removeObserver(self)
                 }
                 
                 
@@ -78,7 +81,10 @@ struct NameView: View {
     private func showNextButton(){
         isNext =  !name.isEmpty ? true : false
     }
-
+    
+    private func safeDivision(numerator: CGFloat , denominator: CGFloat) -> CGFloat {
+        return numerator.isZero ? 0 : numerator / denominator
+    }
     
 }
 

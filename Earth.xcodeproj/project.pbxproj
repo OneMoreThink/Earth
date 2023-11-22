@@ -31,7 +31,6 @@
 		050BC2302B04996D00A33AFF /* BirthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthView.swift; sourceTree = "<group>"; };
 		050BC2322B049D1300A33AFF /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		050BC2342B049F6100A33AFF /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
-		053074452B0D9AAA00DC51BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		056F1B762B05B8E500758766 /* QuestionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionForm.swift; sourceTree = "<group>"; };
 		056F1B782B05F68A00758766 /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
 		056F1B7A2B06609400758766 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
@@ -85,7 +84,6 @@
 		058324922B032DFA00E577A8 /* Earth */ = {
 			isa = PBXGroup;
 			children = (
-				053074452B0D9AAA00DC51BF /* Info.plist */,
 				058324932B032DFA00E577A8 /* EarthApp.swift */,
 				05AC12522B0347590042A117 /* Models */,
 				05AC12512B03474A0042A117 /* Views */,
@@ -357,6 +355,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Earth/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permissions to access camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone permissions to access microphone";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Album permissions to save photos and videos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -391,6 +391,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Earth/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permissions to access camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone permissions to access microphone";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Album permissions to save photos and videos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
