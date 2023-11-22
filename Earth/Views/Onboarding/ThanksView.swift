@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ThanksView: View {
     
-    let backgroundColor = LinearGradient(gradient: Gradient(colors: [.blue.opacity(0.5), .purple.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
+    let backgroundColor = LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .top, endPoint: .bottom)
     
     let cardColor = LinearGradient(gradient: Gradient(colors: [.green.opacity(0.5), .blue.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
     

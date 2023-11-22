@@ -28,14 +28,17 @@ struct PictureView: View {
                     if let image = image {
                         Image(uiImage: image)
                             .resizable()
-                            .frame(width: 300, height: 300)
-                            .scaledToFit()
+                            .frame(width: 300, height: 370)
+                            .scaledToFill()
                             .clipShape(Circle())
                             .overlay{
                                 Circle().stroke(.white.opacity(0.2), lineWidth: 5)
                             }
                             .shadow(radius: 5)
+                            .padding(-40)
+                            .padding(.horizontal,20)
                            
+                   
                             
                            
                         
