@@ -7,9 +7,9 @@
 
 import UIKit
 
-class FileManagers {
+class UserImageManagers {
     
-    static let shared = FileManager() // Singleton
+    static let shared = UserImageManagers() // Singleton
     private init(){}
     
     // MARK: Directory URL for UserImage

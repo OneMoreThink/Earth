@@ -14,6 +14,8 @@ struct ThanksView: View {
     let cardColor = LinearGradient(gradient: Gradient(colors: [.green.opacity(0.5), .blue.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
     
     let buttonColor = LinearGradient(gradient: Gradient(colors: [.red.opacity(0.9), .yellow.opacity(0.7), .red.opacity(0.9)]), startPoint: .top, endPoint: .bottom)
+
+    let userImage : UIImage? = UserImageManagers.shared.loadImage(withName: "userImage")
     
     var body: some View {
        
@@ -36,14 +38,24 @@ struct ThanksView: View {
                     
                     HStack(spacing: 20){
                         
-                        Image("onboarder")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
-                            .background(.white)
-                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        if let userImage = userImage{
+                            Image(uiImage: userImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
+                                .background(.white)
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                             
-                         
+                        } else {
+                            Image("onboarder")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
+                                .background(.white)
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        }
+                        
+                       
                         Spacer()
                         
                         Text("이종선")
@@ -140,3 +152,5 @@ struct ThanksView_Previews: PreviewProvider{
         ThanksView()
     }
 }
+
+

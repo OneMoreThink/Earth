@@ -135,6 +135,12 @@ struct UIImagePickerControllerRepresentable: UIViewControllerRepresentable {
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             guard let newImage = info[.originalImage] as? UIImage else {return}
             image = newImage
+            let success =
+            UserImageManagers.shared.saveImage(image ?? UIImage(), withName: "userImage")
+            if success {
+            } else {
+                //MARK: when fail make a alert
+            }
             showPhotoPicker = false
         }
     }
