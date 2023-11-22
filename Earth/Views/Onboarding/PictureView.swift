@@ -58,7 +58,18 @@ struct PictureView: View {
                     }
                 }
                 .onTapGesture {
-                    showPhotoPicker.toggle()
+                
+                    PermissionsManagers.checkPhotoLibraryPermission { status in
+                        switch status{
+                        case .authorized:
+                            showPhotoPicker.toggle()
+                        // MARK: Error 처리 -> alert
+                        default:
+                            print("error")
+                        }
+                    }
+                    
+                   
                 }
                 .sheet(isPresented: $showPhotoPicker, content: {
                     UIImagePickerControllerRepresentable(image: $image, showPhotoPicker: $showPhotoPicker)
@@ -78,6 +89,7 @@ struct PictureView: View {
         }
         
     }
+    
     func showNextButton(){
         if image != nil {
             isNext = true
