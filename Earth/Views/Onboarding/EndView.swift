@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct EndView: View {
+    
+    @AppStorage("endDate") var endDate: String = ""
+    
     @Binding var onboardingState: Onboarding
     @State var isNext = false
     
@@ -56,6 +59,7 @@ struct EndView: View {
                                 
                             )
                             .onChange(of: selectedDate) {  _ in
+                                endDate = dateFormatter.string(from: selectedDate)
                                 showNextButton()
                             }
                         

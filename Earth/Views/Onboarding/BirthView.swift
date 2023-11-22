@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BirthView: View {
+
+    @AppStorage("birthDate") var birthDate: String = ""
     
     @Binding var onboardingState: Onboarding
     @State var isNext = false
@@ -57,6 +59,7 @@ struct BirthView: View {
                                 
                             )
                             .onChange(of: selectedDate) {  _ in
+                                birthDate = dateFormatter.string(from: selectedDate)
                                 showNextButton()
                             }
                             

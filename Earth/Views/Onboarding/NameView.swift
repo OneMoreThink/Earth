@@ -9,6 +9,8 @@ import SwiftUI
 
 struct NameView: View {
     
+    @AppStorage("userName") var userName : String = ""
+    
     @Binding var onboardingState: Onboarding
     @State var isNext: Bool = false
     
@@ -70,6 +72,7 @@ struct NameView: View {
         
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { notification in
             self.keyboardHight = 0
+            self.userName = name
             showNextButton()
         }
     }

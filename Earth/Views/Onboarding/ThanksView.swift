@@ -14,6 +14,10 @@ struct ThanksView: View {
     let cardColor = LinearGradient(gradient: Gradient(colors: [.green.opacity(0.5), .blue.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
     
     let buttonColor = LinearGradient(gradient: Gradient(colors: [.red.opacity(0.9), .yellow.opacity(0.7), .red.opacity(0.9)]), startPoint: .top, endPoint: .bottom)
+    
+    @AppStorage("userName") var username : String = ""
+    @AppStorage("birthDate") var birthDate : String = ""
+    @AppStorage("endDate") var endDate: String = ""
 
     let userImage : UIImage? = UserImageManagers.shared.loadImage(withName: "userImage")
     
@@ -58,7 +62,7 @@ struct ThanksView: View {
                        
                         Spacer()
                         
-                        Text("이종선")
+                        Text(username)
                             .font(.largeTitle)
                             .bold()
                             
@@ -70,13 +74,23 @@ struct ThanksView: View {
                     .padding(25)
                     
                     VStack(spacing: 20){
-                        Text(" 여행 시작일: 1998. 03. 31 ")
-                            .font(.title)
-                            .bold()
+                        HStack(alignment: .firstTextBaseline){
+                            Text(" 여행 시작일 : ")
+                                .font(.title)
+                                .bold()
+                            Text(birthDate)
+                                .font(.title3)
+                                .bold()
                             
-                        Text(" 여행 종료일: 2098. 03. 31 ")
-                            .font(.title)
-                            .bold()
+                        }
+                        HStack(alignment: .firstTextBaseline){
+                            Text(" 여행 종료일 : ")
+                                .font(.title)
+                                .bold()
+                            Text(endDate)
+                                .font(.title3)
+                                .bold()
+                        }
                     }
                     .padding(20)
     
