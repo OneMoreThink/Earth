@@ -18,7 +18,7 @@ struct ThanksView: View {
     @AppStorage("userName") var username : String = ""
     @AppStorage("birthDate") var birthDate : String = ""
     @AppStorage("endDate") var endDate: String = ""
-
+    @AppStorage("onboardDone") var onboardDone : Bool = false
     let userImage : UIImage? = UserImageManagers.shared.loadImage(withName: "userImage")
     
     var body: some View {
@@ -129,7 +129,7 @@ struct ThanksView: View {
         .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         .overlay(
             Button(action: {
-                   
+                   onboardDone = true
             },
                    
             label: {

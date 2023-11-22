@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Hello, This is home view!")
+        Text("어서오게나 여행자여!")
     }
 }
 
