@@ -7,18 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050BC22D2B0497D900A33AFF /* WelcomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC22C2B0497D900A33AFF /* WelcomView.swift */; };
+		050BC22F2B04994600A33AFF /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC22E2B04994600A33AFF /* NameView.swift */; };
+		050BC2312B04996D00A33AFF /* BirthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2302B04996D00A33AFF /* BirthView.swift */; };
+		050BC2332B049D1300A33AFF /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2322B049D1300A33AFF /* PictureView.swift */; };
+		050BC2352B049F6100A33AFF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050BC2342B049F6100A33AFF /* Onboarding.swift */; };
+		056F1B772B05B8E500758766 /* QuestionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F1B762B05B8E500758766 /* QuestionForm.swift */; };
+		056F1B792B05F68A00758766 /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F1B782B05F68A00758766 /* EndView.swift */; };
+		056F1B7B2B06609400758766 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F1B7A2B06609400758766 /* ThanksView.swift */; };
 		058324942B032DFA00E577A8 /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058324932B032DFA00E577A8 /* EarthApp.swift */; };
-		058324962B032DFA00E577A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058324952B032DFA00E577A8 /* ContentView.swift */; };
 		058324982B032DFD00E577A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058324972B032DFD00E577A8 /* Assets.xcassets */; };
 		0583249B2B032DFD00E577A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */; };
+		05AC12542B03495A0042A117 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12532B03495A0042A117 /* HomeView.swift */; };
+		05AC12562B034A5C0042A117 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12552B034A5C0042A117 /* WalkthroughView.swift */; };
+		05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12572B0356AC0042A117 /* OnBoardingView.swift */; };
+		05EB827C2B0C6E8C00BC8CDE /* PermissionsManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB827B2B0C6E8C00BC8CDE /* PermissionsManagers.swift */; };
+		05EB827E2B0C73AE00BC8CDE /* UserImageManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB827D2B0C73AE00BC8CDE /* UserImageManagers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050BC22C2B0497D900A33AFF /* WelcomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomView.swift; sourceTree = "<group>"; };
+		050BC22E2B04994600A33AFF /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		050BC2302B04996D00A33AFF /* BirthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthView.swift; sourceTree = "<group>"; };
+		050BC2322B049D1300A33AFF /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		050BC2342B049F6100A33AFF /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		056F1B762B05B8E500758766 /* QuestionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionForm.swift; sourceTree = "<group>"; };
+		056F1B782B05F68A00758766 /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
+		056F1B7A2B06609400758766 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
 		058324902B032DFA00E577A8 /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		058324932B032DFA00E577A8 /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
-		058324952B032DFA00E577A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		058324972B032DFD00E577A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05AC12532B03495A0042A117 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		05AC12552B034A5C0042A117 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		05AC12572B0356AC0042A117 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		05EB827B2B0C6E8C00BC8CDE /* PermissionsManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManagers.swift; sourceTree = "<group>"; };
+		05EB827D2B0C73AE00BC8CDE /* UserImageManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageManagers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052226B62B079EE80052BA05 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				05EB827B2B0C6E8C00BC8CDE /* PermissionsManagers.swift */,
+				05EB827D2B0C73AE00BC8CDE /* UserImageManagers.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		058324872B032DFA00E577A8 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				058324932B032DFA00E577A8 /* EarthApp.swift */,
-				058324952B032DFA00E577A8 /* ContentView.swift */,
+				05AC12522B0347590042A117 /* Models */,
+				05AC12512B03474A0042A117 /* Views */,
+				052226B62B079EE80052BA05 /* Managers */,
 				058324972B032DFD00E577A8 /* Assets.xcassets */,
 				058324992B032DFD00E577A8 /* Preview Content */,
 			);
@@ -65,6 +100,39 @@
 				0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		05AC12512B03474A0042A117 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05AC12532B03495A0042A117 /* HomeView.swift */,
+				05EAAF192B03C449004DD93C /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		05AC12522B0347590042A117 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		05EAAF192B03C449004DD93C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				050BC2342B049F6100A33AFF /* Onboarding.swift */,
+				05AC12572B0356AC0042A117 /* OnBoardingView.swift */,
+				050BC22C2B0497D900A33AFF /* WelcomView.swift */,
+				050BC22E2B04994600A33AFF /* NameView.swift */,
+				050BC2302B04996D00A33AFF /* BirthView.swift */,
+				056F1B782B05F68A00758766 /* EndView.swift */,
+				050BC2322B049D1300A33AFF /* PictureView.swift */,
+				056F1B7A2B06609400758766 /* ThanksView.swift */,
+				05AC12552B034A5C0042A117 /* WalkthroughView.swift */,
+				056F1B762B05B8E500758766 /* QuestionForm.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,11 +172,12 @@
 			};
 			buildConfigurationList = 0583248B2B032DFA00E577A8 /* Build configuration list for PBXProject "Earth" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 058324872B032DFA00E577A8;
 			productRefGroup = 058324912B032DFA00E577A8 /* Products */;
@@ -137,8 +206,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058324962B032DFA00E577A8 /* ContentView.swift in Sources */,
+				056F1B792B05F68A00758766 /* EndView.swift in Sources */,
+				050BC2352B049F6100A33AFF /* Onboarding.swift in Sources */,
+				05AC12542B03495A0042A117 /* HomeView.swift in Sources */,
+				05EB827E2B0C73AE00BC8CDE /* UserImageManagers.swift in Sources */,
+				05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */,
+				05EB827C2B0C6E8C00BC8CDE /* PermissionsManagers.swift in Sources */,
+				050BC2312B04996D00A33AFF /* BirthView.swift in Sources */,
+				050BC2332B049D1300A33AFF /* PictureView.swift in Sources */,
 				058324942B032DFA00E577A8 /* EarthApp.swift in Sources */,
+				050BC22D2B0497D900A33AFF /* WelcomView.swift in Sources */,
+				056F1B772B05B8E500758766 /* QuestionForm.swift in Sources */,
+				05AC12562B034A5C0042A117 /* WalkthroughView.swift in Sources */,
+				050BC22F2B04994600A33AFF /* NameView.swift in Sources */,
+				056F1B7B2B06609400758766 /* ThanksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -272,13 +353,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Earth/Preview Content\"";
+				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Earth/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permissions to access camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone permissions to access microphone";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Album permissions to save photos and videos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,9 +373,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.Earth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,13 +390,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Earth/Preview Content\"";
+				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Earth/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permissions to access camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone permissions to access microphone";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Album permissions to save photos and videos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,9 +410,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OneMoreThink.Earth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
