@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Onboarding: String, CaseIterable {
+enum Onboarding: CaseIterable {
     case welcome
     case name
     case birth
