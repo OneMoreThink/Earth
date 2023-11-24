@@ -32,6 +32,14 @@ struct InfoCardView: View {
         "\(date.year)년 \(date.month)개월 \(date.days)일"
     }
     
+    private var percentage: Double {
+        
+        let entire = Calendar.current.dateComponents([.day], from: birthDate, to: endDate).day ?? 0
+        let byToday = Calendar.current.dateComponents([.day], from: birthDate, to: Date.now).day ?? 0
+    
+        return Double(byToday) / Double(entire)
+    }
+    
     
     var body: some View {
         ZStack{
@@ -81,7 +89,7 @@ struct InfoCardView: View {
                    
                 }
                 .overlay(
-                    ProgressView(value: 0.4)
+                    ProgressView(value: percentage)
                         .progressViewStyle(ProgressBar(color: .yellow))
                         .offset(y:20)
                 )
