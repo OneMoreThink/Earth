@@ -19,6 +19,8 @@
 		058324942B032DFA00E577A8 /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058324932B032DFA00E577A8 /* EarthApp.swift */; };
 		058324982B032DFD00E577A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058324972B032DFD00E577A8 /* Assets.xcassets */; };
 		0583249B2B032DFD00E577A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */; };
+		05A9A2FB2B14D1DA0065C8AA /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A9A2FA2B14D1DA0065C8AA /* TabBarView.swift */; };
+		05A9A2FF2B14DA7E0065C8AA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A9A2FE2B14DA7E0065C8AA /* MainTabView.swift */; };
 		05AC12542B03495A0042A117 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12532B03495A0042A117 /* HomeView.swift */; };
 		05AC12562B034A5C0042A117 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12552B034A5C0042A117 /* WalkthroughView.swift */; };
 		05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC12572B0356AC0042A117 /* OnBoardingView.swift */; };
@@ -43,6 +45,8 @@
 		058324932B032DFA00E577A8 /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
 		058324972B032DFD00E577A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05A9A2FA2B14D1DA0065C8AA /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		05A9A2FE2B14DA7E0065C8AA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		05AC12532B03495A0042A117 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		05AC12552B034A5C0042A117 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 		05AC12572B0356AC0042A117 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
@@ -76,7 +80,9 @@
 		053A11782B103A1900F5F35B /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				05A9A2FE2B14DA7E0065C8AA /* MainTabView.swift */,
 				05AC12532B03495A0042A117 /* HomeView.swift */,
+				05A9A2F92B14D1AA0065C8AA /* TabBar */,
 				053A11792B103BB200F5F35B /* UserInfoCard */,
 			);
 			path = MainPage;
@@ -128,6 +134,14 @@
 				0583249A2B032DFD00E577A8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		05A9A2F92B14D1AA0065C8AA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				05A9A2FA2B14D1DA0065C8AA /* TabBarView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		05AC12512B03474A0042A117 /* Views */ = {
@@ -240,12 +254,14 @@
 				05EB827E2B0C73AE00BC8CDE /* UserImageManagers.swift in Sources */,
 				05D27A892B10860D0048C17D /* ProgressBar.swift in Sources */,
 				05AC12582B0356AC0042A117 /* OnBoardingView.swift in Sources */,
+				05A9A2FB2B14D1DA0065C8AA /* TabBarView.swift in Sources */,
 				05EB827C2B0C6E8C00BC8CDE /* PermissionsManagers.swift in Sources */,
 				05D27A872B1069380048C17D /* ProgressArcView.swift in Sources */,
 				050BC2312B04996D00A33AFF /* BirthView.swift in Sources */,
 				050BC2332B049D1300A33AFF /* PictureView.swift in Sources */,
 				058324942B032DFA00E577A8 /* EarthApp.swift in Sources */,
 				050BC22D2B0497D900A33AFF /* WelcomView.swift in Sources */,
+				05A9A2FF2B14DA7E0065C8AA /* MainTabView.swift in Sources */,
 				056F1B772B05B8E500758766 /* QuestionForm.swift in Sources */,
 				05AC12562B034A5C0042A117 /* WalkthroughView.swift in Sources */,
 				050BC22F2B04994600A33AFF /* NameView.swift in Sources */,

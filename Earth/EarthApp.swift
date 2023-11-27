@@ -15,7 +15,7 @@ struct EarthApp: App {
     var body: some Scene {
         WindowGroup {
             if onboardDone{
-                HomeView()
+                MainTabView()
             } else {
                 OnBoardingView()
             }
