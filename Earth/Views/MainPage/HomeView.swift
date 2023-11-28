@@ -21,8 +21,7 @@ struct HomeView: View {
                     
                     Divider()
                     
-                    
-                    // Calender
+                    CalendarView()
                     
                 }
                 .toolbar{
