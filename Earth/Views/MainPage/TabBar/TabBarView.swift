@@ -48,6 +48,7 @@ struct TabBarView: View {
         .padding(.top)
         .padding(.vertical, -10)
         .background(.white)
+        .shadow(color: .black.opacity(0.09), radius: 5, x: 1, y: 1 )
 
         
     }

@@ -17,7 +17,7 @@ struct CalendarView: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
                     .stroke(.white, lineWidth: 2)
-                    .shadow(color: .black, radius: 3, x: 5, y: 5)
+                    .shadow(color: .black, radius: 5, x: 1, y: 1)
                 )
             .padding()
             .padding(.bottom, 10)
