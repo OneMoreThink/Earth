@@ -32,9 +32,15 @@ struct TabBarView: View {
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     .shadow(color: .black.opacity(0.05), radius: 5, x: 5, y: 5)
                     .shadow(color: .black.opacity(0.05), radius: 5, x: -5, y: -5)
+                    .overlay(
+                        Circle()
+                            .stroke(.white, lineWidth: 2)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                        )
+                    .padding()
                 
             })
-            .offset(y: -25)
+            .offset(y: -10)
             
             TabBarButton(animation: animation, image: "play.square.stack", selectedTab: $selectedTab)
             
@@ -42,6 +48,8 @@ struct TabBarView: View {
         .padding(.top)
         .padding(.vertical, -10)
         .background(.white)
+
+        
     }
 }
 

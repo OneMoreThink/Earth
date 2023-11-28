@@ -15,11 +15,12 @@ struct CalendarView: View {
        
         Calender()
             .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(.white, lineWidth: 5)
+                RoundedRectangle(cornerRadius: 5)
+                    .stroke(.white, lineWidth: 2)
                     .shadow(color: .black, radius: 3, x: 5, y: 5)
                 )
             .padding()
+            .padding(.bottom, 10)
         
     }
     
@@ -29,7 +30,13 @@ struct CalendarView: View {
             
             // Month Section
             Text(currentMonth)
-                .font(.system(size: 15))
+                .font(.system(size: 35))
+                .frame(maxWidth: .infinity, alignment: .bottom)
+                .overlay(alignment: .topLeading){
+                    Text(year)
+                        .font(.system(size: 25))
+                        .padding()
+                }
                 .frame(maxWidth: .infinity, alignment: .bottom)
                 .overlay(alignment: .topTrailing){
                     HStack(spacing: 15){
@@ -69,7 +76,7 @@ struct CalendarView: View {
                         Text(day.shortSymbol)
                             .foregroundStyle(day.ignored ? .secondary : .primary)
                             .frame(maxWidth: .infinity)
-                            .frame(height: 50)
+                            .frame(height: 45)
                             .contentShape(.rect)
                         
                     }
@@ -123,7 +130,7 @@ struct CalendarView: View {
     }
     
     var calendarGridHeight: CGFloat {
-        return CGFloat(selectedMonthDates.count / 7) * 50
+        return CGFloat(selectedMonthDates.count / 7) * 45
     }
     
     var horiaontalPadding: CGFloat {
