@@ -31,10 +31,12 @@ struct CalendarView: View {
             // Month Section
             Text(currentMonth)
                 .font(.system(size: 35))
+                .bold()
                 .frame(maxWidth: .infinity, alignment: .bottom)
                 .overlay(alignment: .topLeading){
                     Text(year)
                         .font(.system(size: 25))
+                        .bold()
                         .padding()
                 }
                 .frame(maxWidth: .infinity, alignment: .bottom)

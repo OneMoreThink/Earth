@@ -56,6 +56,7 @@ struct InfoCardView: View {
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 150, height: 150)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
                         } else {
                             Image("idiot")
                                 .resizable()
