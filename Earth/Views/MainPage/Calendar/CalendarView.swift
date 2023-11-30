@@ -17,7 +17,7 @@ struct CalendarView: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
                     .stroke(.white, lineWidth: 2)
-                    .shadow(color: .black, radius: 5, x: 1, y: 1)
+                    .shadow(color: .gray, radius: 2, x: 1, y: 1)
                 )
             .padding()
             .padding(.bottom, 10)
@@ -89,7 +89,7 @@ struct CalendarView: View {
         .padding(.horizontal, horiaontalPadding)
         .padding(.top, topPadding)
         .padding(.bottom, bottomPadding)
-        .background(LinearGradient(gradient: Gradient(colors: [.yellow.opacity(0.5), .yellow.opacity(0.8)]), startPoint: .top, endPoint: .bottom))
+        .background(.blue.opacity(0.03))
     }
     
     // Date Formatter
