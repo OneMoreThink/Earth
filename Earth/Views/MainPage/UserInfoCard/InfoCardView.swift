@@ -45,7 +45,8 @@ struct InfoCardView: View {
     var body: some View {
         ZStack{
             
-            Color.blue.opacity(0.03)
+            Color.blue.opacity(0.01)
+            
                 .frame(maxWidth: .infinity, maxHeight: 270)
                 .shadow(color: .gray, radius: 1, x: 0, y: 5)
             

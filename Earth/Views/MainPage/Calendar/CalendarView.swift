@@ -89,7 +89,7 @@ struct CalendarView: View {
         .padding(.horizontal, horiaontalPadding)
         .padding(.top, topPadding)
         .padding(.bottom, bottomPadding)
-        .background(.blue.opacity(0.03))
+        .background(.blue.opacity(0.01))
     }
     
     // Date Formatter
