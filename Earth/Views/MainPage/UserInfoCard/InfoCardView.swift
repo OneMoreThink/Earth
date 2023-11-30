@@ -11,6 +11,7 @@ struct InfoCardView: View {
     
     let userImage : UIImage? = UserImageManagers.shared.loadImage(withName: "userImage")
     
+    @AppStorage("userName") var userName : String = "username"
     @AppStorage("birthDate") var birthDay : String = "1998년 3월 31일"
     @AppStorage("endDate") var endDay: String = "2100년 3월 31일"
     
@@ -80,14 +81,16 @@ struct InfoCardView: View {
                     
                 }
               
-                Spacer()
+               
                 ZStack{
-                    Text(" 🌏 생존 : " + untilNow + "째")
-                        .font(.headline)
-                        .bold()
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        
-                   
+                    HStack{
+                        Text(userName)
+                            
+                        Text("🌏 생존 : " + untilNow + "째")
+                    }
+                    .font(.headline)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .padding()
                 }
                 .overlay(
                     ProgressView(value: percentage)

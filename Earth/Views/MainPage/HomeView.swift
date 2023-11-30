@@ -18,12 +18,15 @@ struct HomeView: View {
             VStack{
                 
                 InfoCardView()
+                    
                 
                 Divider()
                 
                 CalendarView()
+                    
                 
             }
+            
             
                 
             

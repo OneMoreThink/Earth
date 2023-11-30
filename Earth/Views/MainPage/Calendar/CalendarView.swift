@@ -78,7 +78,7 @@ struct CalendarView: View {
                         Text(day.shortSymbol)
                             .foregroundStyle(day.ignored ? .secondary : .primary)
                             .frame(maxWidth: .infinity)
-                            .frame(height: 45)
+                            .frame(height: 40)
                             .contentShape(.rect)
                         
                     }
@@ -132,7 +132,7 @@ struct CalendarView: View {
     }
     
     var calendarGridHeight: CGFloat {
-        return CGFloat(selectedMonthDates.count / 7) * 45
+        return CGFloat(selectedMonthDates.count / 7) * 40
     }
     
     var horiaontalPadding: CGFloat {
