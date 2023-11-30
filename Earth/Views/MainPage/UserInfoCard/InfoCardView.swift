@@ -45,8 +45,7 @@ struct InfoCardView: View {
     var body: some View {
         ZStack{
             
-            Color.blue.opacity(0.01)
-            
+            Color.blue.opacity(0.008)
                 .frame(maxWidth: .infinity, maxHeight: 270)
                 .shadow(color: .gray, radius: 1, x: 0, y: 5)
             
@@ -107,7 +106,7 @@ struct InfoCardView: View {
         .overlay(
             RoundedRectangle(cornerRadius: 8)
                 .stroke(.white, lineWidth: 1)
-                .shadow(color: .gray, radius: 3, x: 0, y: 5)
+                .shadow(color: .gray, radius: 3, x: 1, y: 1)
             )
             .padding()
             
