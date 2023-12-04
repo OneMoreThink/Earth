@@ -27,7 +27,7 @@ struct MainTabView: View {
                 Color.pink
                     .tag("plus")
                 
-                Color.blue
+                ReelsView()
                     .tag("play.square.stack")
             }
             
