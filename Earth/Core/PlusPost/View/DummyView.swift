@@ -14,10 +14,7 @@ struct DummyView: View {
     
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [Color.yellow.opacity(0.6), Color.yellow.opacity(0.2)]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-            .ignoresSafeArea()
+            Color.princeYellow.ignoresSafeArea()
         }
         .onAppear{
             checkPermissions()
