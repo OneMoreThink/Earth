@@ -11,9 +11,11 @@ struct EmptyPostView: View {
     var body: some View {
         ZStack{
             
-            LinearGradient(gradient: Gradient(colors: [Color.yellow.opacity(0.2), Color.yellow.opacity(0.8)]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
+            LinearGradient(
+                gradient: Gradient(colors: [.princeYellow, .princeYellow.opacity(0.9)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
             .ignoresSafeArea()
             
             VStack(spacing: 20){
@@ -25,18 +27,19 @@ struct EmptyPostView: View {
                     .aspectRatio(contentMode: .fit)
                     .padding(30)
                     .padding(.bottom, 10)
+                    .shadow(radius: 8)
                 
-                Text("지구에서의 첫 여행일지를 남겨보세요")
+                Text("첫 여행일지를 남겨보세요")
                     .font(.title)
                     .fontWeight(.bold)
-                    .kerning(1.3)
+                    .foregroundStyle(.black)
                     .lineSpacing(10.0)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
                     .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.white.opacity(0.5))
-                            .shadow(radius: 20, x: 0, y: 10)
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(.white.opacity(0.9))
+                            .shadow(radius: 3, x: 1, y: 1)
                             .padding(-20)
                             .padding(.horizontal)
                         
