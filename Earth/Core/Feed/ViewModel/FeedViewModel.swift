@@ -11,7 +11,7 @@ import AVKit
 class FeedViewModel: ObservableObject {
     
     @Published var posts: [Post] = []
-    @Published var isPlaying: Bool = false
+    @Published var isPlaying: Bool = true
     @Published var currentPostID: String = ""  // 현재 재생 상태를 관리
     let postService = PostService.shared
     

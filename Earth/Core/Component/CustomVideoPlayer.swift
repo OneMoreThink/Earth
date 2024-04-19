@@ -47,7 +47,7 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
 
         if isPlaying && playerViewController.player?.timeControlStatus != .playing {
             playerViewController.player?.play()
-        } else{
+        } else if !isPlaying && playerViewController.player?.timeControlStatus == .playing {
             playerViewController.player?.pause()
         }
     }

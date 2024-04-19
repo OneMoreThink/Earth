@@ -42,7 +42,10 @@ struct FeedView: View {
             vm.isPlaying = true
             // 처음 화면이 떴을 때 초기값 세팅하기
             if vm.currentPostID == "" {
-                vm.currentPostID = vm.posts.first?.id ?? ""
+                if let firstPost = vm.posts.first{
+                    vm.currentPostID = firstPost.id
+                    firstPost.player?.play()
+                }
             }
             
         }
