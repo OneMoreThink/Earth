@@ -38,9 +38,10 @@ struct MainTabView: View {
             TabBarView(selectedTab: $selectedTab, previousTab: $previousTab)
         }
         .onChange(of: selectedTab, perform: { value in
-            
-            if value != "person.crop.rectangle.stack" {
-                vm.isPlaying = false
+            DispatchQueue.main.async{
+                if value != "person.crop.rectangle.stack" {
+                    vm.isPlaying = false
+                }
             }
         })
         .onChange(of: showNewPostModal){ value in
