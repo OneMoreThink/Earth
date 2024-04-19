@@ -11,12 +11,7 @@ struct EmptyPostView: View {
     var body: some View {
         ZStack{
             
-            LinearGradient(
-                gradient: Gradient(colors: [.princeYellow, .princeYellow.opacity(0.9)]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            Color.princeYellow.ignoresSafeArea()
             
             VStack(spacing: 20){
                 
