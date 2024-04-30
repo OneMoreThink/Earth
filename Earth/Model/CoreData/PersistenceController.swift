@@ -38,14 +38,9 @@ struct PersistenceController {
     
     let container: NSPersistentContainer
     
-    init(container: NSPersistentContainer) {
-        self.container = container
-    }
-    
-    
-    init(inMemory: Bool = false) {
+    private init(inMemory: Bool = false) {
         
-        container = NSPersistentContainer(name: "Earth")
+        self.container = NSPersistentContainer(name: "Earth")
         
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
