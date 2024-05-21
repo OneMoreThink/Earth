@@ -14,8 +14,6 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
     @Binding var isPlaying: Bool
     
     func makeUIViewController(context: Context) -> some UIViewController {
-        // videoplayer audio session 확인
-        configureAudioSession()
         let controller = AVPlayerViewController()
         controller.player = player // 재생할 파일 player에 넣어주기
         controller.showsPlaybackControls = false // 재생 컨트롤러 숨기기
@@ -33,14 +31,6 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
         
     }
     
-    private func configureAudioSession() {
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback)
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch {
-            print("Failed to set audio session category: \(error)")
-        }
-    }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         guard let playerViewController = uiViewController as? AVPlayerViewController else { return }

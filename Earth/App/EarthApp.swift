@@ -20,9 +20,8 @@ struct EarthApp: App {
     }
     
     // 초기 설정을 위한 함수
-       func setupInitialSettings() {
-           // NotificationCenterManager의 setup을 호출
-           NotificationCenterManager.shared.setupNotificationCenter()
+    private func setupInitialSettings() {
+        NotificationCenterManager.shared.setupNotificationCenter()
+        _ = AudioSessionManager.shared
        }
-    
 }

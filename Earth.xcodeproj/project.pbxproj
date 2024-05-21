@@ -18,6 +18,7 @@
 		AF60041B2BCBA46600EBC507 /* PostEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004192BCBA46500EBC507 /* PostEntity+CoreDataProperties.swift */; };
 		AF6004232BCBB1ED00EBC507 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004222BCBB1ED00EBC507 /* PostService.swift */; };
 		AF6004252BCCEC3100EBC507 /* EmptyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004242BCCEC3100EBC507 /* EmptyPostView.swift */; };
+		AF6372882BFCD8AE00AF0B25 /* AudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6372872BFCD8AE00AF0B25 /* AudioSessionManager.swift */; };
 		AF7C21F32BC56336007E6E4B /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C21F22BC56336007E6E4B /* FeedView.swift */; };
 		AF7C21F52BC56CEC007E6E4B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C21F42BC56CEC007E6E4B /* FeedCell.swift */; };
 		AF7C21F72BC56DEA007E6E4B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C21F62BC56DEA007E6E4B /* Post.swift */; };
@@ -48,6 +49,7 @@
 		AF6004192BCBA46500EBC507 /* PostEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF6004222BCBB1ED00EBC507 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		AF6004242BCCEC3100EBC507 /* EmptyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPostView.swift; sourceTree = "<group>"; };
+		AF6372872BFCD8AE00AF0B25 /* AudioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionManager.swift; sourceTree = "<group>"; };
 		AF7C21F22BC56336007E6E4B /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		AF7C21F42BC56CEC007E6E4B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		AF7C21F62BC56DEA007E6E4B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */,
 				AF6004082BC9059600EBC507 /* MediaFileManager.swift */,
 				AF0A62C42BCE96F5001DECE7 /* NotificationCenterManager.swift */,
+				AF6372872BFCD8AE00AF0B25 /* AudioSessionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */,
 				AF6004092BC9059600EBC507 /* MediaFileManager.swift in Sources */,
 				AF6004172BCBA2B800EBC507 /* CoreDataManager.swift in Sources */,
+				AF6372882BFCD8AE00AF0B25 /* AudioSessionManager.swift in Sources */,
 				AF7C22122BC61F0C007E6E4B /* TabBarItem.swift in Sources */,
 				AF7C221B2BC77D55007E6E4B /* DummyView.swift in Sources */,
 				AF6004252BCCEC3100EBC507 /* EmptyPostView.swift in Sources */,
