@@ -18,7 +18,6 @@ struct CameraPreview: UIViewRepresentable {
         let view = UIView()
         
         cameraVm.preview.frame.size = size
-        cameraVm.preview.videoGravity = .resizeAspectFill
         view.layer.addSublayer(cameraVm.preview)
         
         DispatchQueue.global(qos: .userInitiated).async {

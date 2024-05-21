@@ -21,15 +21,10 @@ class CameraViewModel: NSObject, ObservableObject {
     override init(){
         super.init()
         self.configureSession()
-        setupPreview()
     }
     
     // 권한 생략
     
-    // preview 설정 이쪽으로 
-    private func setupPreview(){
-        preview = AVCaptureVideoPreviewLayer(session: session)
-    }
     
     
     // 카메라 및 마이크 설정
