@@ -44,7 +44,6 @@ struct FeedView: View {
             if vm.currentPostID == "" {
                 if let firstPost = vm.posts.first{
                     vm.currentPostID = firstPost.id
-                    firstPost.player?.play()
                 }
             }
             
