@@ -10,23 +10,22 @@ import CoreData
 class CoreDataManager {
     
     static let shared = CoreDataManager()
-    private let persistentContainer : NSPersistentContainer
+    private let mainContext : NSManagedObjectContext
     
     private init(){
-        persistentContainer = PersistenceController.shared.container
+        mainContext = PersistenceController.shared.container.viewContext
     }
     
     // Create Post
     func createPost(videoUrl: String){
-        let context = persistentContainer.viewContext
         
-        let postEntity = PostEntity(context: context)
+        let postEntity = PostEntity(context: mainContext)
         postEntity.id = UUID().uuidString
         postEntity.videoUrl = videoUrl
         postEntity.createdAt = Date()
         
         do{
-            try context.save()
+            try mainContext.save()
             
         } catch {
             print("Failed to save post: \(error)")
@@ -42,7 +41,7 @@ class CoreDataManager {
         request.sortDescriptors = [sortDescriptor]
         
         do {
-            let result = try persistentContainer.viewContext.fetch(request)
+            let result = try mainContext.fetch(request)
             return result.map{Post.from(entity: $0)}
         } catch {
         
@@ -52,19 +51,35 @@ class CoreDataManager {
         }
     }
     
+    // Fetch Latest Post
+    func fetchLatestPost() -> Post?{
+        let request: NSFetchRequest<PostEntity> = PostEntity.fetchRequest()
+        let sortDescriptors = NSSortDescriptor(key: "createdAt", ascending: false)
+        request.fetchLimit = 1
+        request.sortDescriptors = [sortDescriptors]
+        
+        do{
+            let result = try mainContext.fetch(request)
+            return result.first.map{Post.from(entity: $0)}
+        } catch {
+            print("Failed to fetch latest post: \(error)")
+            return nil
+        }
+    }
+    
     
     // Delete
     func deletePost(id: String) -> String? {
         let request: NSFetchRequest<PostEntity> = PostEntity.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", id)
         do {
-            let results = try persistentContainer.viewContext.fetch(request)
+            let results = try mainContext.fetch(request)
             
             if let postEntity = results.first {
                 
                 let videoUrl = postEntity.videoUrl
-                persistentContainer.viewContext.delete(postEntity)
-                try persistentContainer.viewContext.save()
+                mainContext.delete(postEntity)
+                try mainContext.save()
                 
                 return videoUrl
             }
@@ -74,5 +89,5 @@ class CoreDataManager {
         return nil
     }
     
-    
 }
+

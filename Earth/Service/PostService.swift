@@ -19,6 +19,10 @@ class PostService {
         return coreManager.fetchAllPosts()
     }
     
+    func fetchLatestPost() -> Post? {
+        return coreManager.fetchLatestPost()
+    }
+    
     func createNewPost(from srcURL: URL, to destFileName: String){
         
         if let videoUrl = fileManager.moveFile(from: srcURL, to: destFileName){
