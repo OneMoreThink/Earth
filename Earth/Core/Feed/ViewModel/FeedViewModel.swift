@@ -12,7 +12,8 @@ class FeedViewModel: ObservableObject {
     
     @Published var posts: [Post] = []
     @Published var isPlaying: Bool = false
-    @Published var currentPostID: String = ""  // 현재 재생 상태를 관리
+    @Published var currentPostID: String = ""
+    @Published var isLoading: Bool = true
     let postService = PostService.shared
     
     init(){
@@ -30,10 +31,18 @@ class FeedViewModel: ObservableObject {
     
     
     private func setupPosts(){
-        posts = postService.fetchAllPosts()
-        if let firstPostId = posts.first?.id {
-            currentPostID = firstPostId
-            self.isPlaying = true
+        
+        DispatchQueue.global(qos: .userInteractive).async{ [weak self] in
+            guard let self = self else {return}
+            let fetchedPosts = self.postService.fetchAllPosts()
+            DispatchQueue.main.async {
+                self.posts = fetchedPosts
+                self.isLoading = false
+                if let firstPostId = fetchedPosts.first?.id{
+                    self.currentPostID = firstPostId
+                }
+            }
+            
         }
     }
     

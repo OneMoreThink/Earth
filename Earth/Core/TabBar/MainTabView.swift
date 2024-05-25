@@ -16,40 +16,45 @@ struct MainTabView: View {
     
     var body: some View {
         
-        VStack(spacing:0){
+        if vm.isLoading{
+            ProgressView("기억들을 불러오는 중")
+        } else {
             
-            TabView(selection: $selectedTab){
-                if vm.posts.isEmpty{
-                    EmptyPostView()
-                        .tag("person.crop.rectangle.stack")
-                } else {
-                    FeedView(vm: vm)
-                        .ignoresSafeArea()
-                        .tag("person.crop.rectangle.stack")
+            VStack(spacing:0){
+                
+                TabView(selection: $selectedTab){
+                    if vm.posts.isEmpty{
+                        EmptyPostView()
+                            .tag("person.crop.rectangle.stack")
+                    } else {
+                        FeedView(vm: vm)
+                            .ignoresSafeArea()
+                            .tag("person.crop.rectangle.stack")
+                    }
+                    
+                    DummyView(showNewPostModal: $showNewPostModal)
+                        .tag("plus")
+                    
+                    SettingView()
+                        .tag("gearshape")
                 }
-
-                DummyView(showNewPostModal: $showNewPostModal)
-                    .tag("plus")
-
-                SettingView()
-                    .tag("gearshape")
+                
+                TabBarView(selectedTab: $selectedTab, previousTab: $previousTab)
             }
-            
-            TabBarView(selectedTab: $selectedTab, previousTab: $previousTab)
-        }
-        .onChange(of: selectedTab, perform: { value in
+            .onChange(of: selectedTab, perform: { value in
                 if value != "person.crop.rectangle.stack" {
                     vm.isPlaying = false
-            }
-        })
-        .onChange(of: showNewPostModal){ value in
-            if !value {
-                selectedTab = previousTab
-                if selectedTab == "person.crop.rectangle.stack" {
-                    vm.isPlaying = true
                 }
+            })
+            .onChange(of: showNewPostModal){ value in
+                if !value {
+                    selectedTab = previousTab
+                    if selectedTab == "person.crop.rectangle.stack" {
+                        vm.isPlaying = true
+                    }
+                }
+                
             }
-            
         }
     }
 }
