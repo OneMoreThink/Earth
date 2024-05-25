@@ -55,6 +55,10 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
             self.parent = parent
         }
         
+        deinit {
+            NotificationCenter.default.removeObserver(self)
+        }
+        
         // 영상을 처음부터 재생
         @objc func restartPlayback(){
             parent.player.seek(to: .zero)
