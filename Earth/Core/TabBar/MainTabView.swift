@@ -49,9 +49,6 @@ struct MainTabView: View {
             .onChange(of: showNewPostModal){ value in
                 if !value {
                     selectedTab = previousTab
-                    if selectedTab == "person.crop.rectangle.stack" {
-                        vm.isPlaying = true
-                    }
                 }
                 
             }
