@@ -10,7 +10,9 @@ import Foundation
 class NotificationCenterManager {
     
     static let shared = NotificationCenterManager()
-    private init(){}
+    private init(){
+        setupNotificationCenter()
+    }
     
     func setupNotificationCenter() {
         NotificationCenter.default.addObserver(

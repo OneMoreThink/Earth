@@ -21,7 +21,11 @@ struct EarthApp: App {
     
     // 초기 설정을 위한 함수
     private func setupInitialSettings() {
-        NotificationCenterManager.shared.setupNotificationCenter()
+        _ = NotificationCenterManager.shared
         _ = AudioSessionManager.shared
+        _ = PostService.shared
+        _ = MediaFileManager.shared
+        _ = CoreDataManager.shared
+        _ = PersistenceController.shared
        }
 }
