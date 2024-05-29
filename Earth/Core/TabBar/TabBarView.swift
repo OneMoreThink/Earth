@@ -19,7 +19,7 @@ struct TabBarView: View {
             
             plusButton
             
-            TabBarItem(animation: animation, imageName: "gearshape", selectedTab: $selectedTab)
+            TabBarItem(animation: animation, imageName: "calendar.circle", selectedTab: $selectedTab)
         }
         .padding(.top)
         .padding(.vertical, -10)

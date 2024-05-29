@@ -35,7 +35,7 @@ struct MainTabView: View {
                         .tag("plus")
                     
                     SettingView()
-                        .tag("gearshape")
+                        .tag("calendar.circle")
                 }
                 
                 TabBarView(selectedTab: $selectedTab)
@@ -47,7 +47,7 @@ struct MainTabView: View {
             })
             .onChange(of: showNewPostModal){ value in
                 if !value {
-                    selectedTab = "gearshape"
+                    selectedTab = "calendar.circle"
                 }
                 
             }
