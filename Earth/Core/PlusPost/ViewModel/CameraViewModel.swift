@@ -29,6 +29,9 @@ class CameraViewModel: NSObject, ObservableObject {
                          name: .didReloadPosts, object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .didReloadPosts, object: nil)
+    }
     
     @objc private func didReceiveDataReloadNotification(_ notification: Notification){
         self.isLoading = false

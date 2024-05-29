@@ -25,6 +25,10 @@ class FeedViewModel: ObservableObject {
         setupPosts()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .didSaveContext, object: nil)
+    }
+    
     @objc private func didReceiveDataSaveNotification(_ notification: Notification) {
        reloadPosts()
     }
