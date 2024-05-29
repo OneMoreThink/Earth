@@ -12,13 +12,11 @@ struct TabBarItem: View {
     var animation: Namespace.ID
     var imageName: String
     @Binding var selectedTab: String
-    @Binding var previousTab: String
     
     var body: some View {
         
         Button(action: {
             withAnimation(.spring()) { 
-                previousTab = selectedTab
                 selectedTab = imageName
             }
             

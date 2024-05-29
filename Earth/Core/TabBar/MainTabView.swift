@@ -12,7 +12,6 @@ struct MainTabView: View {
     @StateObject var vm = FeedViewModel()
     @State var showNewPostModal: Bool = false
     @State private var selectedTab: String = "person.crop.rectangle.stack"
-    @State private var previousTab: String = "person.crop.rectangle.stack"
     
     var body: some View {
         
@@ -39,7 +38,7 @@ struct MainTabView: View {
                         .tag("gearshape")
                 }
                 
-                TabBarView(selectedTab: $selectedTab, previousTab: $previousTab)
+                TabBarView(selectedTab: $selectedTab)
             }
             .onChange(of: selectedTab, perform: { value in
                 if value != "person.crop.rectangle.stack" {

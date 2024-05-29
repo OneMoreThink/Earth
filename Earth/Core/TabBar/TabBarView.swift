@@ -11,16 +11,15 @@ struct TabBarView: View {
     
     @Binding var selectedTab: String
     @Namespace var animation
-    @Binding var previousTab: String
 
     var body: some View {
         HStack(spacing:0){
             
-            TabBarItem(animation: animation, imageName: "person.crop.rectangle.stack", selectedTab: $selectedTab, previousTab: $previousTab)
+            TabBarItem(animation: animation, imageName: "person.crop.rectangle.stack", selectedTab: $selectedTab)
             
             plusButton
             
-            TabBarItem(animation: animation, imageName: "gearshape", selectedTab: $selectedTab, previousTab: $previousTab)
+            TabBarItem(animation: animation, imageName: "gearshape", selectedTab: $selectedTab)
         }
         .padding(.top)
         .padding(.vertical, -10)
@@ -31,7 +30,6 @@ struct TabBarView: View {
     private var plusButton: some View {
         Button(action: {
             withAnimation(.spring()){
-                previousTab = selectedTab
                 selectedTab = "plus"
             }
             
