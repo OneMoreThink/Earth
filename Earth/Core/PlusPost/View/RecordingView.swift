@@ -65,7 +65,7 @@ struct RecordingView: View {
                             .frame(width: 72, height: 72)
                     )
                     .frame(height: 58)
-                    .padding(.bottom, 12)
+                    .padding(.bottom, 28)
                 })
                     
                 
