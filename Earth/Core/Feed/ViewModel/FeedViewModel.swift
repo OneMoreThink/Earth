@@ -10,6 +10,8 @@ import AVKit
 
 class FeedViewModel: ObservableObject {
     
+    @Published var selectedTab: String = "person.crop.rectangle.stack"
+    @Published var previousTab: String = "person.crop.rectangle.stack"
     @Published var posts: [Post] = []
     @Published var isPlaying: Bool = false
     @Published var currentPostID: String = ""
@@ -53,6 +55,10 @@ class FeedViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.posts.insert(latestPost, at: 0)
                     self.currentPostID = latestPost.id
+                    NotificationCenter.default.post(name: .didReloadPosts, object: nil)
+                    if self.previousTab == "person.crop.rectangle.stack"{
+                        self.isPlaying = true
+                    }
                 }
             }
         }

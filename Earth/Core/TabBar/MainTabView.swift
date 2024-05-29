@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MainTabView: View {
     
-    @State private var selectedTab: String = "person.crop.rectangle.stack"
+    //@State private var selectedTab: String = "person.crop.rectangle.stack"
     @StateObject var vm = FeedViewModel()
     @State var showNewPostModal: Bool = false
-    @State var previousTab: String = "person.crop.rectangle.stack"
+    //@State var previousTab: String = "person.crop.rectangle.stack"
     
     var body: some View {
         
@@ -22,7 +22,7 @@ struct MainTabView: View {
             
             VStack(spacing:0){
                 
-                TabView(selection: $selectedTab){
+                TabView(selection: $vm.selectedTab){
                     if vm.posts.isEmpty{
                         EmptyPostView()
                             .tag("person.crop.rectangle.stack")
@@ -39,16 +39,16 @@ struct MainTabView: View {
                         .tag("gearshape")
                 }
                 
-                TabBarView(selectedTab: $selectedTab, previousTab: $previousTab)
+                TabBarView(selectedTab: $vm.selectedTab, previousTab: $vm.previousTab)
             }
-            .onChange(of: selectedTab, perform: { value in
+            .onChange(of: vm.selectedTab, perform: { value in
                 if value != "person.crop.rectangle.stack" {
                     vm.isPlaying = false
                 }
             })
             .onChange(of: showNewPostModal){ value in
                 if !value {
-                    selectedTab = previousTab
+                    vm.selectedTab = vm.previousTab
                 }
                 
             }

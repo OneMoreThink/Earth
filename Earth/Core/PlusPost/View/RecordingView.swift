@@ -80,12 +80,18 @@ struct RecordingView: View {
                 message: Text("영상일지를 남기기 위해서 설정에서 권한을 주세요"),
                 dismissButton: .default(Text("OK")))
         }
+        .onChange(of: cameraVm.isLoading) { newValue in
+            if !newValue {
+                showNewPostModal = false
+            }
+        }
     }
+    
     
     private func toggleRecording(){
         if cameraVm.isRecording {
             cameraVm.stopRecording()
-            showNewPostModal = false
+            cameraVm.isLoading = true
         } else {
             cameraVm.startRecording()
         }

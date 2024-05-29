@@ -15,15 +15,24 @@ class CameraViewModel: NSObject, ObservableObject {
     @Published var output = AVCaptureMovieFileOutput()
     @Published var preview: AVCaptureVideoPreviewLayer!
     @Published var isRecording = false
+    @Published var isLoading = false
     let postService = PostService.shared
     
     
     override init(){
         super.init()
         self.configureSession()
+        NotificationCenter
+            .default
+            .addObserver(self,
+                         selector: #selector(didReceiveDataReloadNotification(_:)),
+                         name: .didReloadPosts, object: nil)
     }
     
-    // 권한 생략
+    
+    @objc private func didReceiveDataReloadNotification(_ notification: Notification){
+        self.isLoading = false
+    }
     
     
     
@@ -77,7 +86,7 @@ class CameraViewModel: NSObject, ObservableObject {
     func stopRecording(){
         DispatchQueue.main.async{
             guard self.isRecording else {return}
-            self.output.stopRecording()
+            self.output.stopRecording() // output.stopRecording이 delegate의 fileOutput을 호출 
             self.isRecording = false
         }
     }
