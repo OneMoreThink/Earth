@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AF0A62C32BCE96A8001DECE7 /* CustomNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A62C22BCE96A8001DECE7 /* CustomNotifications.swift */; };
 		AF0A62C52BCE96F5001DECE7 /* NotificationCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A62C42BCE96F5001DECE7 /* NotificationCenterManager.swift */; };
+		AF1ABA832C075C2200018F87 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */; };
+		AF1ABA872C075CD200018F87 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA862C075CD200018F87 /* CalendarView.swift */; };
+		AF1ABA8A2C07632D00018F87 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA892C07632D00018F87 /* Date+Extensions.swift */; };
+		AF1ABA8D2C08146F00018F87 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */; };
 		AF6004072BC7BFAE00EBC507 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004062BC7BFAE00EBC507 /* CameraViewModel.swift */; };
 		AF6004092BC9059600EBC507 /* MediaFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004082BC9059600EBC507 /* MediaFileManager.swift */; };
 		AF60040B2BC9099800EBC507 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60040A2BC9099800EBC507 /* CameraPreview.swift */; };
@@ -40,6 +44,10 @@
 /* Begin PBXFileReference section */
 		AF0A62C22BCE96A8001DECE7 /* CustomNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotifications.swift; sourceTree = "<group>"; };
 		AF0A62C42BCE96F5001DECE7 /* NotificationCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterManager.swift; sourceTree = "<group>"; };
+		AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		AF1ABA862C075CD200018F87 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		AF1ABA892C07632D00018F87 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		AF6004062BC7BFAE00EBC507 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AF6004082BC9059600EBC507 /* MediaFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFileManager.swift; sourceTree = "<group>"; };
 		AF60040A2BC9099800EBC507 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
@@ -80,6 +88,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1ABA852C075CAC00018F87 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				AF1ABA8F2C08BF8A00018F87 /* Component */,
+				AF1ABA8B2C0813B200018F87 /* ViewModel */,
+				AF1ABA882C075D4A00018F87 /* View */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		AF1ABA882C075D4A00018F87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF1ABA862C075CD200018F87 /* CalendarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF1ABA8B2C0813B200018F87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF1ABA8E2C08BF7C00018F87 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				AF7C220D2BC57B04007E6E4B /* CustomVideoPlayer.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		AF1ABA8F2C08BF8A00018F87 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		AF6004042BC7BF5200EBC507 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +159,7 @@
 		AF7C21F12BC56328007E6E4B /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				AF1ABA8E2C08BF7C00018F87 /* Component */,
 				AF7C21F82BC56E42007E6E4B /* View */,
 				AF7C21F92BC56E4C007E6E4B /* ViewModel */,
 			);
@@ -131,14 +182,6 @@
 				AF7C21FA2BC56EBB007E6E4B /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		AF7C220C2BC57AEE007E6E4B /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				AF7C220D2BC57B04007E6E4B /* CustomVideoPlayer.swift */,
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		AF7C22132BC62259007E6E4B /* Setting */ = {
@@ -229,9 +272,9 @@
 		AF9F39182BC51E5F00F4988A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AF1ABA852C075CAC00018F87 /* Calendar */,
 				AF7C22182BC77D32007E6E4B /* PlusPost */,
 				AF7C22132BC62259007E6E4B /* Setting */,
-				AF7C220C2BC57AEE007E6E4B /* Component */,
 				AF7C21F12BC56328007E6E4B /* Feed */,
 				AF9F391E2BC5243800F4988A /* TabBar */,
 			);
@@ -242,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0A62C22BCE96A8001DECE7 /* CustomNotifications.swift */,
+				AF1ABA892C07632D00018F87 /* Date+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -342,6 +386,7 @@
 				AF7C22102BC61EAB007E6E4B /* TabBarView.swift in Sources */,
 				AF60040B2BC9099800EBC507 /* CameraPreview.swift in Sources */,
 				AF6004072BC7BFAE00EBC507 /* CameraViewModel.swift in Sources */,
+				AF1ABA832C075C2200018F87 /* CustomDatePicker.swift in Sources */,
 				AF60041A2BCBA46600EBC507 /* PostEntity+CoreDataClass.swift in Sources */,
 				AF60041B2BCBA46600EBC507 /* PostEntity+CoreDataProperties.swift in Sources */,
 				AF7C21F72BC56DEA007E6E4B /* Post.swift in Sources */,
@@ -358,7 +403,10 @@
 				AF7C22152BC6226D007E6E4B /* SettingView.swift in Sources */,
 				AF0A62C32BCE96A8001DECE7 /* CustomNotifications.swift in Sources */,
 				AF7C21F32BC56336007E6E4B /* FeedView.swift in Sources */,
+				AF1ABA872C075CD200018F87 /* CalendarView.swift in Sources */,
 				AF6004112BCB9BEB00EBC507 /* PersistenceController.swift in Sources */,
+				AF1ABA8D2C08146F00018F87 /* CalendarViewModel.swift in Sources */,
+				AF1ABA8A2C07632D00018F87 /* Date+Extensions.swift in Sources */,
 				AF9F391D2BC51EF900F4988A /* MainTabView.swift in Sources */,
 				AF7C21FB2BC56EBB007E6E4B /* FeedViewModel.swift in Sources */,
 				AF7C221F2BC7B059007E6E4B /* PermissionsManager.swift in Sources */,
