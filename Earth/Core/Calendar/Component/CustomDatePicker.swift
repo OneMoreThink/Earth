@@ -35,17 +35,6 @@ struct CustomDatePicker: View {
             }
             
         }
-        .toolbar{
-            ToolbarItem(placement: .topBarTrailing) {
-                Button(action: {
-                    
-                }, label: {
-                  Image(systemName: "gearshape")
-                        .foregroundStyle(.princeYellow)
-                }
-                )
-            }
-        }
         .gesture(
             DragGesture()
                 .onEnded { value in
