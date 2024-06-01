@@ -11,12 +11,15 @@ struct CalendarView: View {
     
     var body: some View {
         NavigationView{
-            VStack{
-                CustomDatePicker()
-                Divider()
-                Spacer()
+            ZStack{
+                Color.gray.opacity(0.09).ignoresSafeArea()
+                VStack{
+                    CustomDatePicker()
+                    Divider()
+                    Spacer()
+                }
+                .padding(.top)
             }
-            .padding(.top)
         }
     }
 }

@@ -35,16 +35,6 @@ struct CustomDatePicker: View {
             }
             
         }
-        .gesture(
-            DragGesture()
-                .onEnded { value in
-                    if value.translation.height > 50 {
-                        vm.decrementMonth()
-                    } else if value.translation.height < -50 {
-                        vm.incrementMonth()
-                    }
-                }
-        )
         .onChange(of: vm.addToMonth){ newValue in
             vm.selectedDate = vm.getCurrentMonth()
         }
@@ -68,6 +58,21 @@ struct CustomDatePicker: View {
             })
             .padding(.leading, 4)
             Spacer()
+            
+            HStack(spacing: 18){
+                Button(action: {
+                    vm.decrementMonth()
+                }, label: {
+                    Image(systemName: "chevron.left")
+                })
+                
+                Button(action: {
+                    vm.incrementMonth()
+                }, label: {
+                    Image(systemName: "chevron.right")
+                })
+            }
+            .padding(.trailing, 16)
         }
         .font(.title2.monospaced())
         .foregroundStyle(.princeYellow)
