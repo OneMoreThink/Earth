@@ -34,7 +34,7 @@ struct MainTabView: View {
                     DummyView(showNewPostModal: $showNewPostModal)
                         .tag("plus")
                     
-                    SettingView()
+                    CalendarView()
                         .tag("calendar.circle")
                 }
                 
