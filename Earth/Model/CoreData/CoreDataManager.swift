@@ -14,50 +14,15 @@ class CoreDataManager {
     
     private init(){
         mainContext = PersistenceController.shared.container.viewContext
-        
-        // MARK: mocking Data 이후 삭제 필요
-        createMockData()
-    }
-    
-    // Mock Data for Testing
-    func createMockData() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        
-        let mockData = [
-            ("2023-05-01", "video1"),
-            ("2023-05-02", "video2"),
-            ("2023-06-01", "video3"),
-            ("2023-06-02", "video4"),
-            ("2023-07-01", "video1"),
-            ("2023-07-02", "video2")
-        ]
-        
-        for (dateString, videoFileName) in mockData {
-            if let date = formatter.date(from: dateString),
-               let videoUrl = Bundle.main.url(forResource: videoFileName, withExtension: "mp4") {
-                
-                let postEntity = PostEntity(context: mainContext)
-                postEntity.id = UUID().uuidString
-                postEntity.videoUrl = videoUrl.absoluteString
-                postEntity.createdAt = date
-                
-                do {
-                    try mainContext.save()
-                } catch {
-                    print("Failed to save post: \(error)")
-                }
-            }
-        }
     }
     
     // Create Post
-    func createPost(videoUrl: String){
+    func createPost(videoUrl: String, date: Date = Date()){
         
         let postEntity = PostEntity(context: mainContext)
         postEntity.id = UUID().uuidString
         postEntity.videoUrl = videoUrl
-        postEntity.createdAt = Date()
+        postEntity.createdAt = date
         
         do{
             try mainContext.save()
