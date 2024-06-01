@@ -23,9 +23,9 @@ struct EarthApp: App {
     private func setupInitialSettings() {
         _ = NotificationCenterManager.shared
         _ = AudioSessionManager.shared
-        _ = PostService.shared
-        _ = MediaFileManager.shared
-        _ = CoreDataManager.shared
         _ = PersistenceController.shared
+        _ = CoreDataManager.shared
+        _ = MediaFileManager.shared
+        _ = PostService.shared
        }
 }

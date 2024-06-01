@@ -13,17 +13,16 @@ class CalendarViewModel: ObservableObject {
     
     @Published var selectedDate: Date
     @Published var addToMonth: Int
-    @Published var postGroup: [PostGroup] = []
+    @Published var postGroup: [PostGroupByMonth] = []
     let postService: PostService
     
     init(currentDate: Date = Date(), addToMonth: Int = 0, postService: PostService = .shared) {
         self.selectedDate = currentDate
         self.addToMonth = addToMonth
         self.postService = postService
-        // fetchPostGroups(for: getCurrentMonth())
+       
+        fetchInitialPostGroups()
     }
-    
-    
     
     func isSameDay(date1: Date, date2: Date) -> Bool {
         let calendar = Calendar.current
@@ -31,7 +30,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     func extractYearAndMonth()->[String]{
-         
+        
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
         formatter.dateFormat = "YYYY MMMM"
@@ -41,7 +40,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     func extractDates() -> [DateValue]{
-       
+        
         let calendar = Calendar.current
         let currentMonth = getCurrentMonth()
         
@@ -61,7 +60,7 @@ class CalendarViewModel: ObservableObject {
     
     func getCurrentMonth() -> Date {
         let calendar = Calendar.current
-        // 3월 15일 -> 4월 15일 addToMonth +1 
+        // 3월 15일 -> 4월 15일 addToMonth +1
         guard let currentMonth = calendar.date(byAdding: .month, value: self.addToMonth, to: Date()) else {
             return Date()
         }
@@ -69,23 +68,76 @@ class CalendarViewModel: ObservableObject {
         let components = calendar.dateComponents([.year, .month], from: currentMonth)
         return calendar.date(from: components) ?? Date()
     }
-
-    func incrementMonth() {
-        addToMonth += 1
-        //fetchPostGroups(for: getCurrentMonth())
-    }
-
-    func decrementMonth() {
-        addToMonth -= 1
-        //fetchPostGroups(for: getCurrentMonth())
+    
+    private func fetchInitialPostGroups() {
+        let calendar = Calendar.current
+        let currentMonth = getCurrentMonth()
+        
+        let monthsToFetch = [-1, 0, 1]
+        
+        for monthOffset in monthsToFetch {
+            if let monthDate = calendar.date(byAdding: .month, value: monthOffset, to: currentMonth) {
+                fetchPostGroup(for: monthDate) { [weak self] newPostGroup in
+                    DispatchQueue.main.async {
+                        self?.postGroup.append(newPostGroup)
+                    }
+                }
+            }
+        }
     }
     
+    private func fetchPostGroup(for date: Date, completion: @escaping (PostGroupByMonth) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            let newPostGroup = self.postService.fetchPostsGroupedByMonth(date: date)
+            completion(newPostGroup)
+        }
+    }
+    
+    func incrementMonth() {
+        addToMonth += 1
+        self.postGroup.removeFirst()
+        
+        let calendar = Calendar.current
+        let updatedMonth = getCurrentMonth()
+        guard let forFetchMonth = calendar.date(byAdding: .month, value: 1, to: updatedMonth) else {
+            return
+        }
+        fetchPostGroup(for: forFetchMonth) { [weak self] newPostGroup in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.postGroup.append(newPostGroup)
+            }
+        }
+    }
+    
+    func decrementMonth() {
+        addToMonth -= 1
+        self.postGroup.removeLast()
+        
+        let calendar = Calendar.current
+        let updatedMonth = getCurrentMonth()
+        guard let forFetchMonth = calendar.date(byAdding: .month, value: -1, to: updatedMonth) else {
+            return
+        }
+        fetchPostGroup(for: forFetchMonth) { [weak self] newPostGroup in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.postGroup.insert(newPostGroup, at: 0)
+            }
+        }
+    }
 }
 
-struct PostGroup: Identifiable {
+struct PostGroupByDay: Identifiable {
     var id: String = UUID().uuidString
-    var date: Date
+    var day: Date
     var posts: [Post]
+}
+
+struct PostGroupByMonth: Identifiable {
+    var id: String = UUID().uuidString
+    var month: Date
+    var postGroup: [PostGroupByDay]
 }
 
 struct DateValue: Identifiable{
@@ -133,3 +185,4 @@ enum Weekday: Int, Identifiable, CaseIterable {
         return self == .sunday || self == .saturday
     }
 }
+
