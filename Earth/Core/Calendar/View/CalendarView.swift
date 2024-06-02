@@ -15,8 +15,6 @@ struct CalendarView: View {
                 Color.gray.opacity(0.09).ignoresSafeArea()
                 VStack{
                     CustomDatePicker()
-                    Divider()
-                    Spacer()
                 }
                 .padding(.top)
             }

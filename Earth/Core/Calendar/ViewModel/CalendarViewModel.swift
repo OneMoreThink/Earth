@@ -13,13 +13,14 @@ class CalendarViewModel: ObservableObject {
     
     @Published var selectedDate: Date
     @Published var addToMonth: Int
-    @Published var postGroup: [PostGroupByMonth] = []
+    @Published var postGroup: [PostGroupByMonth]
     let postService: PostService
     
     init(currentDate: Date = Date(), addToMonth: Int = 0, postService: PostService = .shared) {
         self.selectedDate = currentDate
         self.addToMonth = addToMonth
         self.postService = postService
+        self.postGroup = [PostGroupByMonth(month: .now, postGroup: []),PostGroupByMonth(month: .now, postGroup: []),PostGroupByMonth(month: .now, postGroup: [])]
        
         fetchInitialPostGroups()
     }
@@ -70,7 +71,10 @@ class CalendarViewModel: ObservableObject {
     }
     
     private func fetchInitialPostGroups() {
+        self.postGroup.removeAll()
+        
         let calendar = Calendar.current
+        // 현재 달력이 위치한 달의 1일자 정보
         let currentMonth = getCurrentMonth()
         
         let monthsToFetch = [-1, 0, 1]
@@ -87,7 +91,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     private func fetchPostGroup(for date: Date, completion: @escaping (PostGroupByMonth) -> Void) {
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .default).async {
             let newPostGroup = self.postService.fetchPostsGroupedByMonth(date: date)
             completion(newPostGroup)
         }
@@ -95,7 +99,6 @@ class CalendarViewModel: ObservableObject {
     
     func incrementMonth() {
         addToMonth += 1
-        self.postGroup.removeFirst()
         
         let calendar = Calendar.current
         let updatedMonth = getCurrentMonth()
@@ -106,13 +109,13 @@ class CalendarViewModel: ObservableObject {
             DispatchQueue.main.async {
                 guard let self = self else {return}
                 self.postGroup.append(newPostGroup)
+                self.postGroup.removeFirst()
             }
         }
     }
     
     func decrementMonth() {
         addToMonth -= 1
-        self.postGroup.removeLast()
         
         let calendar = Calendar.current
         let updatedMonth = getCurrentMonth()
@@ -123,6 +126,7 @@ class CalendarViewModel: ObservableObject {
             DispatchQueue.main.async {
                 guard let self = self else {return}
                 self.postGroup.insert(newPostGroup, at: 0)
+                self.postGroup.removeLast()
             }
         }
     }

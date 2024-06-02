@@ -10,12 +10,14 @@ import SwiftUI
 @main
 struct EarthApp: App {
     
+    @StateObject var vm = CalendarViewModel()
     
     init() {setupInitialSettings()}
 
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .environmentObject(vm)
         }
     }
     
