@@ -30,7 +30,6 @@ struct DummyView: View {
         .fullScreenCover(isPresented: $showNewPostModal){
             RecordingView(showNewPostModal: $showNewPostModal)
                 .ignoresSafeArea()
-                .padding(2)
 
         }
 

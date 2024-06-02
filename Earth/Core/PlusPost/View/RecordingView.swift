@@ -41,6 +41,7 @@ struct RecordingView: View {
                     
                 }
                 .padding()
+                .padding(.top, 32)
                 
                 Spacer()
                 
@@ -65,7 +66,7 @@ struct RecordingView: View {
                             .frame(width: 72, height: 72)
                     )
                     .frame(height: 58)
-                    .padding(.bottom, 28)
+                    .padding(.bottom, 40)
                 })
                     
                 
