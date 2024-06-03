@@ -12,50 +12,54 @@ struct CustomDatePicker: View {
     @EnvironmentObject var vm: CalendarViewModel
     
     var body: some View {
+        
+        VStack(spacing: 10){
             
-            VStack(spacing: 10){
-                
-                header
-                weekdays
-                let colums = Array(repeating: GridItem(), count: 7)
-                LazyVGrid(columns: colums, spacing: 15){
-                    ForEach(vm.extractDates()){ value in
-                        CardView(value: value)
-                            .background(
-                                RoundedRectangle(cornerRadius: 4)
-                                    .fill(LinearGradient(colors: [.yellow, .princeYellow.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                                    .padding(.horizontal, 8)
-                                    .opacity(vm.isSameDay(date1: value.date, date2: vm.selectedDate) ? 1 : 0)
-                                
-                            )
-                            .onTapGesture {
-                                vm.selectedDate = value.date
-                            }
-                        
-                    }
-                }
-                
-                ScrollView(.vertical) {
-                    VStack{
-                        let postOfMonth = vm.postGroup[1]
-                        
-                        if let postOfDay = postOfMonth.postGroup.first(where: { postOfDay in
-                            return vm.isSameDay(date1: postOfDay.day, date2: vm.selectedDate)
-                        }){
-                            ForEach(postOfDay.posts){ post in
-                                
-                                Text("\(post.createdAt)")
-                                
-                            }
+            header
+            weekdays
+            let colums = Array(repeating: GridItem(), count: 7)
+            LazyVGrid(columns: colums, spacing: 15){
+                ForEach(vm.extractDates()){ value in
+                    CardView(value: value)
+                        .background(
+                            RoundedRectangle(cornerRadius: 4)
+                                .fill(LinearGradient(colors: [.yellow, .princeYellow.opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                                .padding(.horizontal, 2)
+                                .opacity(vm.isSameDay(date1: value.date, date2: vm.selectedDate) ? 1 : 0)
+                            
+                        )
+                        .onTapGesture {
+                            vm.selectedDate = value.date
                         }
-                        
-                    }
+                    
                 }
             }
             
+            ScrollView(.vertical,showsIndicators: false) {
+                VStack{
+                    let postOfMonth = vm.postGroup[1]
+                    
+                    if let postOfDay = postOfMonth.postGroup.first(where: { postOfDay in
+                        return vm.isSameDay(date1: postOfDay.day, date2: vm.selectedDate)
+                    }){
+                        ForEach(postOfDay.posts){ post in
+                            
+                            Text("\(post.createdAt)")
+                            
+                        }
+                    }
+                    
+                    Spacer()
+                }
+                Spacer()
+            }
         
+        }
         .onChange(of: vm.addToMonth){ newValue in
             vm.selectedDate = vm.getCurrentMonth()
+        }
+        .onAppear{
+            vm.reloadCalendar()
         }
         
     }
@@ -68,14 +72,7 @@ struct CustomDatePicker: View {
             
             Text(vm.extractYearAndMonth()[0] + "년")
             Text(vm.extractYearAndMonth()[1])
-            
-            Button(action: {
-                vm.addToMonth = 0
-            }, label: {
-                Image(systemName: "arrow.circlepath")
-                    .padding(.trailing)
-            })
-            .padding(.leading, 4)
+
             Spacer()
             
             HStack(spacing: 18){
@@ -166,4 +163,5 @@ struct CustomDatePicker: View {
 
 #Preview {
     CustomDatePicker()
+        .environmentObject(CalendarViewModel())
 }

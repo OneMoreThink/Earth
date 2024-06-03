@@ -21,8 +21,45 @@ class CalendarViewModel: ObservableObject {
         self.addToMonth = addToMonth
         self.postService = postService
         self.postGroup = [PostGroupByMonth(month: .now, postGroup: []),PostGroupByMonth(month: .now, postGroup: []),PostGroupByMonth(month: .now, postGroup: [])]
-       
+        NotificationCenter
+            .default
+            .addObserver(self,
+                         selector: #selector(didReceiveDataSaveNotification(_:)),
+                         name: .didSaveContext, object: nil)
         fetchInitialPostGroups()
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .didSaveContext, object: nil)
+    }
+    
+    @objc private func didReceiveDataSaveNotification(_ notification: Notification) {
+        reloadCalendar()
+    }
+    
+    func reloadCalendar(){
+        // 현재달이 postGroup에서 몇번째 Index에 위치했느냐에 따라 다르게 처리
+        // -1 ~ 1 까지 -> 이 범위를 초과하는 경우, addToMonth를 변경시키면서 이동하는 과정에서 알아서 업데이트
+        guard (-1...1).contains(self.addToMonth) else {return}
+        print("reloadCalendar")
+        fetchPostGroup(for: Date()) { [weak self] newPostGroup in
+            DispatchQueue.main.async {
+                switch self?.addToMonth {
+                case -1:
+                    self?.postGroup.removeLast()
+                    self?.postGroup.append(newPostGroup)
+                case 0:
+                    self?.postGroup.remove(at: 1)
+                    self?.postGroup.insert(newPostGroup, at: 1)
+                case 1:
+                    self?.postGroup.removeFirst()
+                    self?.postGroup.insert(newPostGroup, at: 0)
+                default:
+                    return
+                    
+                }
+            }
+        }
+        print("updateCalendar")
     }
     
     func isSameDay(date1: Date, date2: Date) -> Bool {
