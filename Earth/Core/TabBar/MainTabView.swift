@@ -13,6 +13,8 @@ struct MainTabView: View {
     @State var showNewPostModal: Bool = false
     @State private var selectedTab: String = "person.crop.rectangle.stack"
     
+    init() { UITabBar.appearance().isHidden = true }
+    
     var body: some View {
         
         if vm.isLoading{
