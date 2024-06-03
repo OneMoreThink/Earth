@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF0A62C32BCE96A8001DECE7 /* CustomNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A62C22BCE96A8001DECE7 /* CustomNotifications.swift */; };
+		AF0A62C32BCE96A8001DECE7 /* NotificationsName+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A62C22BCE96A8001DECE7 /* NotificationsName+Extensions.swift */; };
 		AF0A62C52BCE96F5001DECE7 /* NotificationCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A62C42BCE96F5001DECE7 /* NotificationCenterManager.swift */; };
 		AF1ABA832C075C2200018F87 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */; };
 		AF1ABA872C075CD200018F87 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA862C075CD200018F87 /* CalendarView.swift */; };
 		AF1ABA8A2C07632D00018F87 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA892C07632D00018F87 /* Date+Extensions.swift */; };
 		AF1ABA8D2C08146F00018F87 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */; };
+		AF4458522C0DD84E00F903C9 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4458512C0DD84E00F903C9 /* UINavigationController+Extensions.swift */; };
 		AF6004072BC7BFAE00EBC507 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004062BC7BFAE00EBC507 /* CameraViewModel.swift */; };
 		AF6004092BC9059600EBC507 /* MediaFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004082BC9059600EBC507 /* MediaFileManager.swift */; };
 		AF60040B2BC9099800EBC507 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60040A2BC9099800EBC507 /* CameraPreview.swift */; };
@@ -23,6 +24,7 @@
 		AF6004232BCBB1ED00EBC507 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004222BCBB1ED00EBC507 /* PostService.swift */; };
 		AF6004252BCCEC3100EBC507 /* EmptyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004242BCCEC3100EBC507 /* EmptyPostView.swift */; };
 		AF6372882BFCD8AE00AF0B25 /* AudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6372872BFCD8AE00AF0B25 /* AudioSessionManager.swift */; };
+		AF654D932C0D7E5A00B0AE4E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF654D922C0D7E5A00B0AE4E /* PostView.swift */; };
 		AF7C21F32BC56336007E6E4B /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C21F22BC56336007E6E4B /* FeedView.swift */; };
 		AF7C21F52BC56CEC007E6E4B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C21F42BC56CEC007E6E4B /* FeedCell.swift */; };
 		AF7C21F72BC56DEA007E6E4B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C21F62BC56DEA007E6E4B /* Post.swift */; };
@@ -39,15 +41,17 @@
 		AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */; };
 		AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF9F390D2BC51A6C00F4988A /* Earth.xcdatamodeld */; };
 		AF9F391D2BC51EF900F4988A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F391C2BC51EF900F4988A /* MainTabView.swift */; };
+		AFF51C452C0D6888001F3973 /* PostLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF51C442C0D6888001F3973 /* PostLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF0A62C22BCE96A8001DECE7 /* CustomNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotifications.swift; sourceTree = "<group>"; };
+		AF0A62C22BCE96A8001DECE7 /* NotificationsName+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationsName+Extensions.swift"; sourceTree = "<group>"; };
 		AF0A62C42BCE96F5001DECE7 /* NotificationCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterManager.swift; sourceTree = "<group>"; };
 		AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		AF1ABA862C075CD200018F87 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		AF1ABA892C07632D00018F87 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		AF4458512C0DD84E00F903C9 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		AF6004062BC7BFAE00EBC507 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AF6004082BC9059600EBC507 /* MediaFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFileManager.swift; sourceTree = "<group>"; };
 		AF60040A2BC9099800EBC507 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		AF6004222BCBB1ED00EBC507 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		AF6004242BCCEC3100EBC507 /* EmptyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPostView.swift; sourceTree = "<group>"; };
 		AF6372872BFCD8AE00AF0B25 /* AudioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionManager.swift; sourceTree = "<group>"; };
+		AF654D922C0D7E5A00B0AE4E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		AF7C21F22BC56336007E6E4B /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		AF7C21F42BC56CEC007E6E4B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		AF7C21F62BC56DEA007E6E4B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9F390E2BC51A6C00F4988A /* Earth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Earth.xcdatamodel; sourceTree = "<group>"; };
 		AF9F391C2BC51EF900F4988A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		AFF51C442C0D6888001F3973 /* PostLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */,
+				AFF51C442C0D6888001F3973 /* PostLabel.swift */,
+				AF654D922C0D7E5A00B0AE4E /* PostView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -284,8 +292,9 @@
 		AF9F39192BC51E6800F4988A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AF0A62C22BCE96A8001DECE7 /* CustomNotifications.swift */,
+				AF0A62C22BCE96A8001DECE7 /* NotificationsName+Extensions.swift */,
 				AF1ABA892C07632D00018F87 /* Date+Extensions.swift */,
+				AF4458512C0DD84E00F903C9 /* UINavigationController+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -390,6 +399,8 @@
 				AF60041A2BCBA46600EBC507 /* PostEntity+CoreDataClass.swift in Sources */,
 				AF60041B2BCBA46600EBC507 /* PostEntity+CoreDataProperties.swift in Sources */,
 				AF7C21F72BC56DEA007E6E4B /* Post.swift in Sources */,
+				AFF51C452C0D6888001F3973 /* PostLabel.swift in Sources */,
+				AF654D932C0D7E5A00B0AE4E /* PostView.swift in Sources */,
 				AF7C221D2BC77F01007E6E4B /* RecordingView.swift in Sources */,
 				AF6004232BCBB1ED00EBC507 /* PostService.swift in Sources */,
 				AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */,
@@ -401,7 +412,8 @@
 				AF6004252BCCEC3100EBC507 /* EmptyPostView.swift in Sources */,
 				AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */,
 				AF7C22152BC6226D007E6E4B /* SettingView.swift in Sources */,
-				AF0A62C32BCE96A8001DECE7 /* CustomNotifications.swift in Sources */,
+				AF4458522C0DD84E00F903C9 /* UINavigationController+Extensions.swift in Sources */,
+				AF0A62C32BCE96A8001DECE7 /* NotificationsName+Extensions.swift in Sources */,
 				AF7C21F32BC56336007E6E4B /* FeedView.swift in Sources */,
 				AF1ABA872C075CD200018F87 /* CalendarView.swift in Sources */,
 				AF6004112BCB9BEB00EBC507 /* PersistenceController.swift in Sources */,

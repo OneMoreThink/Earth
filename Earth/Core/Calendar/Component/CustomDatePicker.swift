@@ -35,17 +35,22 @@ struct CustomDatePicker: View {
                 }
             }
             
-            ScrollView(.vertical,showsIndicators: false) {
-                VStack{
+            Spacer()
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8){
                     let postOfMonth = vm.postGroup[1]
                     
                     if let postOfDay = postOfMonth.postGroup.first(where: { postOfDay in
                         return vm.isSameDay(date1: postOfDay.day, date2: vm.selectedDate)
                     }){
                         ForEach(postOfDay.posts){ post in
-                            
-                            Text("\(post.createdAt)")
-                            
+        
+                            NavigationLink {
+                                PostView(post: post)
+                            } label: {
+                                PostLabel(post: post)
+                            }
                         }
                     }
                     
@@ -160,8 +165,3 @@ struct CustomDatePicker: View {
 
 
 
-
-#Preview {
-    CustomDatePicker()
-        .environmentObject(CalendarViewModel())
-}
