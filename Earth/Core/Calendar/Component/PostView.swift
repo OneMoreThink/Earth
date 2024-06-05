@@ -16,7 +16,7 @@ struct PostView: View {
         
         ZStack{
             if let player = post.player {
-                CustomVideoPlayer(player: player, isPlaying: $isPlaying)
+                PostVideoPlayer(player: player, isPlaying: $isPlaying)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -35,9 +35,6 @@ struct PostView: View {
         }
         .onAppear{
             isPlaying = true 
-        }
-        .onDisappear{
-            isPlaying = false
         }
        
     }

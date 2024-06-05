@@ -14,6 +14,8 @@
 		AF1ABA8A2C07632D00018F87 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA892C07632D00018F87 /* Date+Extensions.swift */; };
 		AF1ABA8D2C08146F00018F87 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */; };
 		AF4458522C0DD84E00F903C9 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4458512C0DD84E00F903C9 /* UINavigationController+Extensions.swift */; };
+		AF4458542C0DDC9E00F903C9 /* VideoSeekBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4458532C0DDC9E00F903C9 /* VideoSeekBar.swift */; };
+		AF4458562C0FFB1000F903C9 /* PostVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4458552C0FFB1000F903C9 /* PostVideoPlayer.swift */; };
 		AF6004072BC7BFAE00EBC507 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004062BC7BFAE00EBC507 /* CameraViewModel.swift */; };
 		AF6004092BC9059600EBC507 /* MediaFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004082BC9059600EBC507 /* MediaFileManager.swift */; };
 		AF60040B2BC9099800EBC507 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60040A2BC9099800EBC507 /* CameraPreview.swift */; };
@@ -41,6 +43,8 @@
 		AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */; };
 		AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF9F390D2BC51A6C00F4988A /* Earth.xcdatamodeld */; };
 		AF9F391D2BC51EF900F4988A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F391C2BC51EF900F4988A /* MainTabView.swift */; };
+		AFF517822C102E0D009488FA /* CustomHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF517812C102E0D009488FA /* CustomHostingController.swift */; };
+		AFF517842C1031A1009488FA /* PostHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF517832C1031A1009488FA /* PostHostingController.swift */; };
 		AFF51C452C0D6888001F3973 /* PostLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF51C442C0D6888001F3973 /* PostLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,8 @@
 		AF1ABA892C07632D00018F87 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		AF4458512C0DD84E00F903C9 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		AF4458532C0DDC9E00F903C9 /* VideoSeekBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSeekBar.swift; sourceTree = "<group>"; };
+		AF4458552C0FFB1000F903C9 /* PostVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVideoPlayer.swift; sourceTree = "<group>"; };
 		AF6004062BC7BFAE00EBC507 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AF6004082BC9059600EBC507 /* MediaFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFileManager.swift; sourceTree = "<group>"; };
 		AF60040A2BC9099800EBC507 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
@@ -80,6 +86,8 @@
 		AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9F390E2BC51A6C00F4988A /* Earth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Earth.xcdatamodel; sourceTree = "<group>"; };
 		AF9F391C2BC51EF900F4988A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		AFF517812C102E0D009488FA /* CustomHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHostingController.swift; sourceTree = "<group>"; };
+		AFF517832C1031A1009488FA /* PostHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHostingController.swift; sourceTree = "<group>"; };
 		AFF51C442C0D6888001F3973 /* PostLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +142,10 @@
 				AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */,
 				AFF51C442C0D6888001F3973 /* PostLabel.swift */,
 				AF654D922C0D7E5A00B0AE4E /* PostView.swift */,
+				AF4458532C0DDC9E00F903C9 /* VideoSeekBar.swift */,
+				AF4458552C0FFB1000F903C9 /* PostVideoPlayer.swift */,
+				AFF517812C102E0D009488FA /* CustomHostingController.swift */,
+				AFF517832C1031A1009488FA /* PostHostingController.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -391,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7C21F52BC56CEC007E6E4B /* FeedCell.swift in Sources */,
+				AF4458542C0DDC9E00F903C9 /* VideoSeekBar.swift in Sources */,
 				AF0A62C52BCE96F5001DECE7 /* NotificationCenterManager.swift in Sources */,
 				AF7C22102BC61EAB007E6E4B /* TabBarView.swift in Sources */,
 				AF60040B2BC9099800EBC507 /* CameraPreview.swift in Sources */,
@@ -404,10 +417,12 @@
 				AF7C221D2BC77F01007E6E4B /* RecordingView.swift in Sources */,
 				AF6004232BCBB1ED00EBC507 /* PostService.swift in Sources */,
 				AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */,
+				AF4458562C0FFB1000F903C9 /* PostVideoPlayer.swift in Sources */,
 				AF6004092BC9059600EBC507 /* MediaFileManager.swift in Sources */,
 				AF6004172BCBA2B800EBC507 /* CoreDataManager.swift in Sources */,
 				AF6372882BFCD8AE00AF0B25 /* AudioSessionManager.swift in Sources */,
 				AF7C22122BC61F0C007E6E4B /* TabBarItem.swift in Sources */,
+				AFF517842C1031A1009488FA /* PostHostingController.swift in Sources */,
 				AF7C221B2BC77D55007E6E4B /* DummyView.swift in Sources */,
 				AF6004252BCCEC3100EBC507 /* EmptyPostView.swift in Sources */,
 				AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */,
@@ -415,6 +430,7 @@
 				AF4458522C0DD84E00F903C9 /* UINavigationController+Extensions.swift in Sources */,
 				AF0A62C32BCE96A8001DECE7 /* NotificationsName+Extensions.swift in Sources */,
 				AF7C21F32BC56336007E6E4B /* FeedView.swift in Sources */,
+				AFF517822C102E0D009488FA /* CustomHostingController.swift in Sources */,
 				AF1ABA872C075CD200018F87 /* CalendarView.swift in Sources */,
 				AF6004112BCB9BEB00EBC507 /* PersistenceController.swift in Sources */,
 				AF1ABA8D2C08146F00018F87 /* CalendarViewModel.swift in Sources */,

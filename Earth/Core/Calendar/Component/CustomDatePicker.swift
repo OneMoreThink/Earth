@@ -47,7 +47,7 @@ struct CustomDatePicker: View {
                         ForEach(postOfDay.posts){ post in
         
                             NavigationLink {
-                                PostView(post: post)
+                                PostHostingController(post: post)
                             } label: {
                                 PostLabel(post: post)
                             }
