@@ -6,17 +6,33 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct PostView: View {
     
     @State var isPlaying: Bool = false
     @Environment(\.dismiss) var dismiss
     let post: Post
+    @StateObject private var vm: VideoSeekBarViewModel
+    @StateObject private var playerManager: AVPlayerManager
+    
+    init(post: Post) {
+        self.post = post
+        _vm = StateObject(wrappedValue: VideoSeekBarViewModel(player: post.player!))
+        _playerManager = StateObject(wrappedValue: AVPlayerManager(player: post.player!))
+    }
+    
+    
     var body: some View {
         
         ZStack{
-            if let player = post.player {
-                PostVideoPlayer(player: player, isPlaying: $isPlaying)
+            VStack{
+                if let player = post.player {
+                    PostVideoPlayer(playerManager: playerManager, isPlaying: $isPlaying)
+                }
+                
+                
+                VideoSeekBar(vm: vm, isPlaying: $isPlaying)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -34,7 +50,12 @@ struct PostView: View {
             }
         }
         .onAppear{
-            isPlaying = true 
+            isPlaying = true
+            playerManager.play()
+        }
+        .onDisappear{
+            isPlaying = false
+            playerManager.pause()
         }
        
     }

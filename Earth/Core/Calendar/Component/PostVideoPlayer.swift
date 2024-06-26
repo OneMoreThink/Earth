@@ -10,44 +10,39 @@ import AVKit
 
 struct PostVideoPlayer: UIViewControllerRepresentable {
     
-    var player: AVPlayer
+    @ObservedObject var playerManager: AVPlayerManager
     @Binding var isPlaying: Bool
     
-    func makeUIViewController(context: Context) -> some UIViewController {
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
         let controller = AVPlayerViewController()
-        controller.player = player
+        controller.player = playerManager.player
         controller.showsPlaybackControls = false
         controller.videoGravity = .resizeAspectFill
-        player.actionAtItemEnd = .none
+        playerManager.player?.actionAtItemEnd = .none
         
         NotificationCenter.default.addObserver(
             context.coordinator,
             selector: #selector(context.coordinator.restartPlayback),
-            name: AVPlayerItem.didPlayToEndTimeNotification,
-            object: player.currentItem
+            name: .AVPlayerItemDidPlayToEndTime,
+            object: playerManager.player?.currentItem
         )
         
         return controller
-        
     }
     
-    
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        guard let playerViewController = uiViewController as? AVPlayerViewController else { return }
-
-        if isPlaying && playerViewController.player?.timeControlStatus != .playing {
-            playerViewController.player?.play()
-        } else if !isPlaying && playerViewController.player?.timeControlStatus == .playing {
-            playerViewController.player?.pause()
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
+        if isPlaying {
+            playerManager.play()
+        } else {
+            playerManager.pause()
         }
     }
-    
     
     func makeCoordinator() -> Coordinator {
         return Coordinator(parent: self)
     }
     
-    class Coordinator: NSObject{
+    class Coordinator: NSObject {
         
         var parent: PostVideoPlayer
         
@@ -59,10 +54,9 @@ struct PostVideoPlayer: UIViewControllerRepresentable {
             NotificationCenter.default.removeObserver(self)
         }
         
-        // 영상을 처음부터 재생
         @objc func restartPlayback(){
-            parent.player.seek(to: .zero)
+            parent.playerManager.reset()
+            parent.playerManager.play()
         }
-        
     }
 }
