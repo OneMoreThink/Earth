@@ -38,13 +38,12 @@
 		AF7C221B2BC77D55007E6E4B /* DummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221A2BC77D55007E6E4B /* DummyView.swift */; };
 		AF7C221D2BC77F01007E6E4B /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221C2BC77F01007E6E4B /* RecordingView.swift */; };
 		AF7C221F2BC7B059007E6E4B /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */; };
+		AF82C6B22C21B52600D6A43A /* AVPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */; };
 		AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F39022BC51A6A00F4988A /* EarthApp.swift */; };
 		AF9F39072BC51A6C00F4988A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39062BC51A6C00F4988A /* Assets.xcassets */; };
 		AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */; };
 		AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF9F390D2BC51A6C00F4988A /* Earth.xcdatamodeld */; };
 		AF9F391D2BC51EF900F4988A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F391C2BC51EF900F4988A /* MainTabView.swift */; };
-		AFF517822C102E0D009488FA /* CustomHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF517812C102E0D009488FA /* CustomHostingController.swift */; };
-		AFF517842C1031A1009488FA /* PostHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF517832C1031A1009488FA /* PostHostingController.swift */; };
 		AFF51C452C0D6888001F3973 /* PostLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF51C442C0D6888001F3973 /* PostLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,14 +79,13 @@
 		AF7C221A2BC77D55007E6E4B /* DummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyView.swift; sourceTree = "<group>"; };
 		AF7C221C2BC77F01007E6E4B /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
+		AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerManager.swift; sourceTree = "<group>"; };
 		AF9F38FF2BC51A6A00F4988A /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9F39022BC51A6A00F4988A /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
 		AF9F39062BC51A6C00F4988A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9F390E2BC51A6C00F4988A /* Earth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Earth.xcdatamodel; sourceTree = "<group>"; };
 		AF9F391C2BC51EF900F4988A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		AFF517812C102E0D009488FA /* CustomHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHostingController.swift; sourceTree = "<group>"; };
-		AFF517832C1031A1009488FA /* PostHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHostingController.swift; sourceTree = "<group>"; };
 		AFF51C442C0D6888001F3973 /* PostLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,13 +137,12 @@
 		AF1ABA8F2C08BF8A00018F87 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				AF4458532C0DDC9E00F903C9 /* VideoSeekBar.swift */,
 				AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */,
 				AFF51C442C0D6888001F3973 /* PostLabel.swift */,
 				AF654D922C0D7E5A00B0AE4E /* PostView.swift */,
-				AF4458532C0DDC9E00F903C9 /* VideoSeekBar.swift */,
 				AF4458552C0FFB1000F903C9 /* PostVideoPlayer.swift */,
-				AFF517812C102E0D009488FA /* CustomHostingController.swift */,
-				AFF517832C1031A1009488FA /* PostHostingController.swift */,
+				AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -422,7 +419,6 @@
 				AF6004172BCBA2B800EBC507 /* CoreDataManager.swift in Sources */,
 				AF6372882BFCD8AE00AF0B25 /* AudioSessionManager.swift in Sources */,
 				AF7C22122BC61F0C007E6E4B /* TabBarItem.swift in Sources */,
-				AFF517842C1031A1009488FA /* PostHostingController.swift in Sources */,
 				AF7C221B2BC77D55007E6E4B /* DummyView.swift in Sources */,
 				AF6004252BCCEC3100EBC507 /* EmptyPostView.swift in Sources */,
 				AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */,
@@ -430,13 +426,13 @@
 				AF4458522C0DD84E00F903C9 /* UINavigationController+Extensions.swift in Sources */,
 				AF0A62C32BCE96A8001DECE7 /* NotificationsName+Extensions.swift in Sources */,
 				AF7C21F32BC56336007E6E4B /* FeedView.swift in Sources */,
-				AFF517822C102E0D009488FA /* CustomHostingController.swift in Sources */,
 				AF1ABA872C075CD200018F87 /* CalendarView.swift in Sources */,
 				AF6004112BCB9BEB00EBC507 /* PersistenceController.swift in Sources */,
 				AF1ABA8D2C08146F00018F87 /* CalendarViewModel.swift in Sources */,
 				AF1ABA8A2C07632D00018F87 /* Date+Extensions.swift in Sources */,
 				AF9F391D2BC51EF900F4988A /* MainTabView.swift in Sources */,
 				AF7C21FB2BC56EBB007E6E4B /* FeedViewModel.swift in Sources */,
+				AF82C6B22C21B52600D6A43A /* AVPlayerManager.swift in Sources */,
 				AF7C221F2BC7B059007E6E4B /* PermissionsManager.swift in Sources */,
 				AF7C220E2BC57B04007E6E4B /* CustomVideoPlayer.swift in Sources */,
 			);

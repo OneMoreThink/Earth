@@ -38,28 +38,41 @@ class VideoSeekBarViewModel: ObservableObject {
 
 struct VideoSeekBar: View {
     
-    @State private var currentTime: Double = 0.0
-    @State private var duration: Double = 0.0
-    let player: AVPlayer
+    @ObservedObject var vm: VideoSeekBarViewModel
     @Binding var isPlaying: Bool
-    private var timeObserverToken: Any?
-    
     
     var body: some View {
         
         
         VStack{
             HStack{
-                Text("")
+                Text(formatTime(seconds: vm.currentTime))
                 Spacer()
-                Text("")
+                Text(formatTime(seconds: vm.duration))
             }
-            .padding(.horizontal)
             
-            
+            Slider(value: $vm.currentTime, in: 0...vm.duration, onEditingChanged: sliderEditingChanged )
         }
+        .padding(.horizontal)
         
     }
     
+    private func sliderEditingChanged(editingStarted: Bool){
+        if editingStarted {
+            vm.player.pause()
+        } else {
+            let newTime = CMTime(seconds: vm.currentTime, preferredTimescale: 600)
+            vm.player.seek(to: newTime) { _ in
+                if isPlaying {
+                    vm.player.play()
+                }
+            }
+        }
+    }
+    
+    private func formatTime(seconds: Double) -> String {
+        let minutes = Int(seconds) / 60
+        let seconds = Int(seconds) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
 }
-
