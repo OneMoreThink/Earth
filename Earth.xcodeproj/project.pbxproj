@@ -39,6 +39,10 @@
 		AF7C221D2BC77F01007E6E4B /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221C2BC77F01007E6E4B /* RecordingView.swift */; };
 		AF7C221F2BC7B059007E6E4B /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */; };
 		AF82C6B22C21B52600D6A43A /* AVPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */; };
+		AF8350D42C36DA490040DC4C /* Sample Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF8350D32C36DA490040DC4C /* Sample Video.mp4 */; };
+		AF8350D62C36DAA50040DC4C /* SeekVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */; };
+		AF8350D82C36DBFF0040DC4C /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D72C36DBFF0040DC4C /* TempView.swift */; };
+		AF8350DA2C36E0120040DC4C /* TempVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */; };
 		AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F39022BC51A6A00F4988A /* EarthApp.swift */; };
 		AF9F39072BC51A6C00F4988A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39062BC51A6C00F4988A /* Assets.xcassets */; };
 		AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */; };
@@ -80,6 +84,10 @@
 		AF7C221C2BC77F01007E6E4B /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
 		AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerManager.swift; sourceTree = "<group>"; };
+		AF8350D32C36DA490040DC4C /* Sample Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sample Video.mp4"; sourceTree = "<group>"; };
+		AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekVideoPlayer.swift; sourceTree = "<group>"; };
+		AF8350D72C36DBFF0040DC4C /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempVideoPlayer.swift; sourceTree = "<group>"; };
 		AF9F38FF2BC51A6A00F4988A /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9F39022BC51A6A00F4988A /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
 		AF9F39062BC51A6C00F4988A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +151,9 @@
 				AF654D922C0D7E5A00B0AE4E /* PostView.swift */,
 				AF4458552C0FFB1000F903C9 /* PostVideoPlayer.swift */,
 				AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */,
+				AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */,
+				AF8350D72C36DBFF0040DC4C /* TempView.swift */,
+				AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -221,6 +232,7 @@
 		AF9F38F62BC51A6A00F4988A = {
 			isa = PBXGroup;
 			children = (
+				AF8350D32C36DA490040DC4C /* Sample Video.mp4 */,
 				AF9F39012BC51A6A00F4988A /* Earth */,
 				AF9F39002BC51A6A00F4988A /* Products */,
 			);
@@ -387,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8350D42C36DA490040DC4C /* Sample Video.mp4 in Resources */,
 				AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */,
 				AF9F39072BC51A6C00F4988A /* Assets.xcassets in Resources */,
 			);
@@ -413,6 +426,7 @@
 				AF654D932C0D7E5A00B0AE4E /* PostView.swift in Sources */,
 				AF7C221D2BC77F01007E6E4B /* RecordingView.swift in Sources */,
 				AF6004232BCBB1ED00EBC507 /* PostService.swift in Sources */,
+				AF8350D62C36DAA50040DC4C /* SeekVideoPlayer.swift in Sources */,
 				AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */,
 				AF4458562C0FFB1000F903C9 /* PostVideoPlayer.swift in Sources */,
 				AF6004092BC9059600EBC507 /* MediaFileManager.swift in Sources */,
@@ -426,6 +440,7 @@
 				AF4458522C0DD84E00F903C9 /* UINavigationController+Extensions.swift in Sources */,
 				AF0A62C32BCE96A8001DECE7 /* NotificationsName+Extensions.swift in Sources */,
 				AF7C21F32BC56336007E6E4B /* FeedView.swift in Sources */,
+				AF8350DA2C36E0120040DC4C /* TempVideoPlayer.swift in Sources */,
 				AF1ABA872C075CD200018F87 /* CalendarView.swift in Sources */,
 				AF6004112BCB9BEB00EBC507 /* PersistenceController.swift in Sources */,
 				AF1ABA8D2C08146F00018F87 /* CalendarViewModel.swift in Sources */,
@@ -434,6 +449,7 @@
 				AF7C21FB2BC56EBB007E6E4B /* FeedViewModel.swift in Sources */,
 				AF82C6B22C21B52600D6A43A /* AVPlayerManager.swift in Sources */,
 				AF7C221F2BC7B059007E6E4B /* PermissionsManager.swift in Sources */,
+				AF8350D82C36DBFF0040DC4C /* TempView.swift in Sources */,
 				AF7C220E2BC57B04007E6E4B /* CustomVideoPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
