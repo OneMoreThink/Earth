@@ -39,9 +39,8 @@ struct CustomDatePicker: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8){
-                    let postOfMonth = vm.postGroup[1]
                     
-                    if let postOfDay = postOfMonth.postGroup.first(where: { postOfDay in
+                    if let postOfMonth = vm.postGroupByMonth, let postOfDay = postOfMonth.postGroup.first(where: { postOfDay in
                         return vm.isSameDay(date1: postOfDay.day, date2: vm.selectedDate)
                     }){
                         ForEach(postOfDay.posts){ post in
@@ -62,9 +61,10 @@ struct CustomDatePicker: View {
         }
         .onChange(of: vm.addToMonth){ newValue in
             vm.selectedDate = vm.getCurrentMonth()
+            vm.fetchSelectedMonthPosts(date: vm.selectedDate)
         }
         .onAppear{
-            vm.reloadCalendar()
+            //vm.reloadCalendar()
         }
         
     }
@@ -82,13 +82,13 @@ struct CustomDatePicker: View {
             
             HStack(spacing: 18){
                 Button(action: {
-                    vm.decrementMonth()
+                    vm.addToMonth -= 1
                 }, label: {
                     Image(systemName: "chevron.left")
                 })
                 
                 Button(action: {
-                    vm.incrementMonth()
+                    vm.addToMonth += 1
                 }, label: {
                     Image(systemName: "chevron.right")
                 })
@@ -120,10 +120,8 @@ struct CustomDatePicker: View {
         VStack {
             if value.day != -1 {
                 
-                let postOfMonth = vm.postGroup[1]
-                
-                if let postOfDay =
-                    postOfMonth.postGroup.first(where: { post in return vm.isSameDay(date1: post.day, date2: value.date)}){
+                    if let postOfMonth = vm.postGroupByMonth,
+                    let postOfDay = postOfMonth.postGroup.first(where: { post in return vm.isSameDay(date1: post.day, date2: value.date)}){
                     Text("\(value.day)")
                         .font(.title3.monospaced())
                         .foregroundStyle(dateForegoundColor(date: value.date))

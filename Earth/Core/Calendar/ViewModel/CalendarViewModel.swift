@@ -13,53 +13,54 @@ class CalendarViewModel: ObservableObject {
     
     @Published var selectedDate: Date
     @Published var addToMonth: Int
-    @Published var postGroup: [PostGroupByMonth]
+    @Published var postGroupByMonth: PostGroupByMonth?
     let postService: PostService
     
     init(currentDate: Date = Date(), addToMonth: Int = 0, postService: PostService = .shared) {
         self.selectedDate = currentDate
         self.addToMonth = addToMonth
         self.postService = postService
-        self.postGroup = [PostGroupByMonth(month: .now, postGroup: []),PostGroupByMonth(month: .now, postGroup: []),PostGroupByMonth(month: .now, postGroup: [])]
         NotificationCenter
             .default
             .addObserver(self,
                          selector: #selector(didReceiveDataSaveNotification(_:)),
                          name: .didSaveContext, object: nil)
-        fetchInitialPostGroups()
+        
+        fetchSelectedMonthPosts(date: .now)
     }
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name: .didSaveContext, object: nil)
     }
     
     @objc private func didReceiveDataSaveNotification(_ notification: Notification) {
-        reloadCalendar()
+        addToMonth = 0
+        fetchSelectedMonthPosts(date: .now)
     }
     
-    func reloadCalendar(){
-        // 현재달이 postGroup에서 몇번째 Index에 위치했느냐에 따라 다르게 처리
-        // -1 ~ 1 까지 -> 이 범위를 초과하는 경우, addToMonth를 변경시키면서 이동하는 과정에서 알아서 업데이트
-        guard (-1...1).contains(self.addToMonth) else {return}
-        print("reloadCalendar")
-        fetchPostGroup(for: Date()) { [weak self] newPostGroup in
-            DispatchQueue.main.async {
-                switch self?.addToMonth {
-                case -1:
-                    self?.postGroup.removeLast()
-                    self?.postGroup.append(newPostGroup)
-                case 0:
-                    self?.postGroup.remove(at: 1)
-                    self?.postGroup.insert(newPostGroup, at: 1)
-                case 1:
-                    self?.postGroup.removeFirst()
-                    self?.postGroup.insert(newPostGroup, at: 0)
-                default:
-                    return
-                    
-                }
+    func fetchSelectedMonthPosts(date: Date) {
+        fetchPostGroup(for: date) { [weak self] posts in
+            DispatchQueue.main.async{
+                self?.postGroupByMonth = posts
             }
         }
-        print("updateCalendar")
+    }
+    
+    private func fetchPostGroup(for date: Date, completion: @escaping (PostGroupByMonth) -> Void) {
+        DispatchQueue.global(qos: .default).async {
+            let newPostGroup = self.postService.fetchPostsGroupedByMonth(date: date)
+            completion(newPostGroup)
+        }
+    }
+    
+    
+    func getCurrentMonth() -> Date {
+        let calendar = Calendar.current
+        guard let currentMonth = calendar.date(byAdding: .month, value: self.addToMonth, to: Date()) else {
+            return Date()
+        }
+        let components = calendar.dateComponents([.year, .month], from: currentMonth)
+        return calendar.date(from: components) ?? Date()
     }
     
     func isSameDay(date1: Date, date2: Date) -> Bool {
@@ -96,77 +97,6 @@ class CalendarViewModel: ObservableObject {
     }
     
     
-    func getCurrentMonth() -> Date {
-        let calendar = Calendar.current
-        // 3월 15일 -> 4월 15일 addToMonth +1
-        guard let currentMonth = calendar.date(byAdding: .month, value: self.addToMonth, to: Date()) else {
-            return Date()
-        }
-        // 4월 15일 -> 4월 1일
-        let components = calendar.dateComponents([.year, .month], from: currentMonth)
-        return calendar.date(from: components) ?? Date()
-    }
-    
-    private func fetchInitialPostGroups() {
-        self.postGroup.removeAll()
-        
-        let calendar = Calendar.current
-        // 현재 달력이 위치한 달의 1일자 정보
-        let currentMonth = getCurrentMonth()
-        
-        let monthsToFetch = [-1, 0, 1]
-        
-        for monthOffset in monthsToFetch {
-            if let monthDate = calendar.date(byAdding: .month, value: monthOffset, to: currentMonth) {
-                fetchPostGroup(for: monthDate) { [weak self] newPostGroup in
-                    DispatchQueue.main.async {
-                        self?.postGroup.append(newPostGroup)
-                    }
-                }
-            }
-        }
-    }
-    
-    private func fetchPostGroup(for date: Date, completion: @escaping (PostGroupByMonth) -> Void) {
-        DispatchQueue.global(qos: .default).async {
-            let newPostGroup = self.postService.fetchPostsGroupedByMonth(date: date)
-            completion(newPostGroup)
-        }
-    }
-    
-    func incrementMonth() {
-        addToMonth += 1
-        
-        let calendar = Calendar.current
-        let updatedMonth = getCurrentMonth()
-        guard let forFetchMonth = calendar.date(byAdding: .month, value: 1, to: updatedMonth) else {
-            return
-        }
-        fetchPostGroup(for: forFetchMonth) { [weak self] newPostGroup in
-            DispatchQueue.main.async {
-                guard let self = self else {return}
-                self.postGroup.append(newPostGroup)
-                self.postGroup.removeFirst()
-            }
-        }
-    }
-    
-    func decrementMonth() {
-        addToMonth -= 1
-        
-        let calendar = Calendar.current
-        let updatedMonth = getCurrentMonth()
-        guard let forFetchMonth = calendar.date(byAdding: .month, value: -1, to: updatedMonth) else {
-            return
-        }
-        fetchPostGroup(for: forFetchMonth) { [weak self] newPostGroup in
-            DispatchQueue.main.async {
-                guard let self = self else {return}
-                self.postGroup.insert(newPostGroup, at: 0)
-                self.postGroup.removeLast()
-            }
-        }
-    }
 }
 
 struct PostGroupByDay: Identifiable {
