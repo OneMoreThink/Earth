@@ -38,7 +38,6 @@
 		AF7C221F2BC7B059007E6E4B /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */; };
 		AF8350D62C36DAA50040DC4C /* SeekVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */; };
 		AF8350DA2C36E0120040DC4C /* TempVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */; };
-		AF8350DC2C3980E60040DC4C /* BottomSheetForDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350DB2C3980E60040DC4C /* BottomSheetForDelete.swift */; };
 		AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F39022BC51A6A00F4988A /* EarthApp.swift */; };
 		AF9F39072BC51A6C00F4988A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39062BC51A6C00F4988A /* Assets.xcassets */; };
 		AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */; };
@@ -79,7 +78,6 @@
 		AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
 		AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekVideoPlayer.swift; sourceTree = "<group>"; };
 		AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempVideoPlayer.swift; sourceTree = "<group>"; };
-		AF8350DB2C3980E60040DC4C /* BottomSheetForDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetForDelete.swift; sourceTree = "<group>"; };
 		AF9F38FF2BC51A6A00F4988A /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9F39022BC51A6A00F4988A /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
 		AF9F39062BC51A6C00F4988A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				AF654D922C0D7E5A00B0AE4E /* PostView.swift */,
 				AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */,
 				AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */,
-				AF8350DB2C3980E60040DC4C /* BottomSheetForDelete.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -420,7 +417,6 @@
 				AF7C22122BC61F0C007E6E4B /* TabBarItem.swift in Sources */,
 				AF7C221B2BC77D55007E6E4B /* DummyView.swift in Sources */,
 				AF6004252BCCEC3100EBC507 /* EmptyPostView.swift in Sources */,
-				AF8350DC2C3980E60040DC4C /* BottomSheetForDelete.swift in Sources */,
 				AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */,
 				AF7C22152BC6226D007E6E4B /* SettingView.swift in Sources */,
 				AF4458522C0DD84E00F903C9 /* UINavigationController+Extensions.swift in Sources */,

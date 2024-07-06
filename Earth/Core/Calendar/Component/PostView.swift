@@ -14,7 +14,7 @@ struct PostView: View {
     @Environment(\.dismiss) var dismiss
     let post: Post
     
-    @State private var isSheetPresented = false
+    @State private var isAlertPresented = false
     
     init(post: Post) {
         self.post = post
@@ -37,20 +37,11 @@ struct PostView: View {
                     }
                 }
             }
-            .confirmationDialog("정말로 삭제하시겠습니까?", isPresented: $isSheetPresented) {
-                Button(role: .destructive) {
+            .alert(isPresented: $isAlertPresented){
+                Alert(title: Text("삭제 확인"), message: Text("한 순간을 떠나보낼까요?"), primaryButton: .destructive(Text("삭제"), action: {
                     
-                } label: {
-                    Text("삭제")
-                }
-                
-                Button(role: .cancel) {
-                    
-                } label: {
-                    Text("취소")
-                }
-
-
+                    dismiss()
+                }), secondaryButton: .cancel(Text("취소")))
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -69,10 +60,10 @@ struct PostView: View {
             
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
-                    isSheetPresented.toggle()
+                    isAlertPresented.toggle()
                 }, label: {
                     Image(systemName: "star.slash")
-                        .foregroundStyle(.red)
+                        .foregroundStyle(.princeYellow)
                 })
             }
         }
