@@ -14,8 +14,6 @@
 		AF1ABA8A2C07632D00018F87 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA892C07632D00018F87 /* Date+Extensions.swift */; };
 		AF1ABA8D2C08146F00018F87 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */; };
 		AF4458522C0DD84E00F903C9 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4458512C0DD84E00F903C9 /* UINavigationController+Extensions.swift */; };
-		AF4458542C0DDC9E00F903C9 /* VideoSeekBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4458532C0DDC9E00F903C9 /* VideoSeekBar.swift */; };
-		AF4458562C0FFB1000F903C9 /* PostVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4458552C0FFB1000F903C9 /* PostVideoPlayer.swift */; };
 		AF6004072BC7BFAE00EBC507 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004062BC7BFAE00EBC507 /* CameraViewModel.swift */; };
 		AF6004092BC9059600EBC507 /* MediaFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6004082BC9059600EBC507 /* MediaFileManager.swift */; };
 		AF60040B2BC9099800EBC507 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60040A2BC9099800EBC507 /* CameraPreview.swift */; };
@@ -38,10 +36,7 @@
 		AF7C221B2BC77D55007E6E4B /* DummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221A2BC77D55007E6E4B /* DummyView.swift */; };
 		AF7C221D2BC77F01007E6E4B /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221C2BC77F01007E6E4B /* RecordingView.swift */; };
 		AF7C221F2BC7B059007E6E4B /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */; };
-		AF82C6B22C21B52600D6A43A /* AVPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */; };
-		AF8350D42C36DA490040DC4C /* Sample Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF8350D32C36DA490040DC4C /* Sample Video.mp4 */; };
 		AF8350D62C36DAA50040DC4C /* SeekVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */; };
-		AF8350D82C36DBFF0040DC4C /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D72C36DBFF0040DC4C /* TempView.swift */; };
 		AF8350DA2C36E0120040DC4C /* TempVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */; };
 		AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F39022BC51A6A00F4988A /* EarthApp.swift */; };
 		AF9F39072BC51A6C00F4988A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39062BC51A6C00F4988A /* Assets.xcassets */; };
@@ -59,8 +54,6 @@
 		AF1ABA892C07632D00018F87 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		AF1ABA8C2C08146F00018F87 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		AF4458512C0DD84E00F903C9 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
-		AF4458532C0DDC9E00F903C9 /* VideoSeekBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSeekBar.swift; sourceTree = "<group>"; };
-		AF4458552C0FFB1000F903C9 /* PostVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVideoPlayer.swift; sourceTree = "<group>"; };
 		AF6004062BC7BFAE00EBC507 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AF6004082BC9059600EBC507 /* MediaFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFileManager.swift; sourceTree = "<group>"; };
 		AF60040A2BC9099800EBC507 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
@@ -83,10 +76,7 @@
 		AF7C221A2BC77D55007E6E4B /* DummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyView.swift; sourceTree = "<group>"; };
 		AF7C221C2BC77F01007E6E4B /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		AF7C221E2BC7B059007E6E4B /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
-		AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerManager.swift; sourceTree = "<group>"; };
-		AF8350D32C36DA490040DC4C /* Sample Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sample Video.mp4"; sourceTree = "<group>"; };
 		AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekVideoPlayer.swift; sourceTree = "<group>"; };
-		AF8350D72C36DBFF0040DC4C /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempVideoPlayer.swift; sourceTree = "<group>"; };
 		AF9F38FF2BC51A6A00F4988A /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9F39022BC51A6A00F4988A /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
@@ -145,14 +135,10 @@
 		AF1ABA8F2C08BF8A00018F87 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				AF4458532C0DDC9E00F903C9 /* VideoSeekBar.swift */,
 				AF1ABA822C075C2200018F87 /* CustomDatePicker.swift */,
 				AFF51C442C0D6888001F3973 /* PostLabel.swift */,
 				AF654D922C0D7E5A00B0AE4E /* PostView.swift */,
-				AF4458552C0FFB1000F903C9 /* PostVideoPlayer.swift */,
-				AF82C6B12C21B52600D6A43A /* AVPlayerManager.swift */,
 				AF8350D52C36DAA50040DC4C /* SeekVideoPlayer.swift */,
-				AF8350D72C36DBFF0040DC4C /* TempView.swift */,
 				AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */,
 			);
 			path = Component;
@@ -232,7 +218,6 @@
 		AF9F38F62BC51A6A00F4988A = {
 			isa = PBXGroup;
 			children = (
-				AF8350D32C36DA490040DC4C /* Sample Video.mp4 */,
 				AF9F39012BC51A6A00F4988A /* Earth */,
 				AF9F39002BC51A6A00F4988A /* Products */,
 			);
@@ -399,7 +384,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8350D42C36DA490040DC4C /* Sample Video.mp4 in Resources */,
 				AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */,
 				AF9F39072BC51A6C00F4988A /* Assets.xcassets in Resources */,
 			);
@@ -413,7 +397,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7C21F52BC56CEC007E6E4B /* FeedCell.swift in Sources */,
-				AF4458542C0DDC9E00F903C9 /* VideoSeekBar.swift in Sources */,
 				AF0A62C52BCE96F5001DECE7 /* NotificationCenterManager.swift in Sources */,
 				AF7C22102BC61EAB007E6E4B /* TabBarView.swift in Sources */,
 				AF60040B2BC9099800EBC507 /* CameraPreview.swift in Sources */,
@@ -428,7 +411,6 @@
 				AF6004232BCBB1ED00EBC507 /* PostService.swift in Sources */,
 				AF8350D62C36DAA50040DC4C /* SeekVideoPlayer.swift in Sources */,
 				AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */,
-				AF4458562C0FFB1000F903C9 /* PostVideoPlayer.swift in Sources */,
 				AF6004092BC9059600EBC507 /* MediaFileManager.swift in Sources */,
 				AF6004172BCBA2B800EBC507 /* CoreDataManager.swift in Sources */,
 				AF6372882BFCD8AE00AF0B25 /* AudioSessionManager.swift in Sources */,
@@ -447,9 +429,7 @@
 				AF1ABA8A2C07632D00018F87 /* Date+Extensions.swift in Sources */,
 				AF9F391D2BC51EF900F4988A /* MainTabView.swift in Sources */,
 				AF7C21FB2BC56EBB007E6E4B /* FeedViewModel.swift in Sources */,
-				AF82C6B22C21B52600D6A43A /* AVPlayerManager.swift in Sources */,
 				AF7C221F2BC7B059007E6E4B /* PermissionsManager.swift in Sources */,
-				AF8350D82C36DBFF0040DC4C /* TempView.swift in Sources */,
 				AF7C220E2BC57B04007E6E4B /* CustomVideoPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,18 +11,11 @@ import AVFoundation
 struct SeekVideoPlayer: View {
     
     var size: CGSize
-    
-    //MARK: sample video 제거
-    @State private var player: AVPlayer? = {
-        if let bundle = Bundle.main.path(forResource: "Sample Video", ofType: "mp4"){
-            return .init(url: URL(fileURLWithPath: bundle))
-        }
-        return nil
-    }()
+    var player: AVPlayer?
+    @Binding var isPlaying: Bool
     
     
     @State private var showPlayerControls: Bool = false
-    @State private var isPlaying: Bool = false
     @State private var isFinishedPlaying: Bool = false
     @State private var timeoutTask: DispatchWorkItem?
     
@@ -67,13 +60,11 @@ struct SeekVideoPlayer: View {
                         .overlay(alignment: .bottom){
                             VideoSeekerView(videoPlayerSize)
                         }
+                        
                 }
             }
             
         }
-        // MARK: 제거 필요
-        .padding(.vertical, 60)
-        .padding(.horizontal, 24)
         .onAppear{
             guard !isObserverAdded else {return}
            
@@ -177,11 +168,11 @@ struct SeekVideoPlayer: View {
                 .fill(.princeYellow)
                 .frame(width: max(videoSize.width * progress, 0))
         }
-        .frame(height: 3)
+        .frame(height: 4)
         .overlay(alignment: .leading){
             Circle()
                 .fill(.princeYellow)
-                .frame(width: 15, height: 15)
+                .frame(width: 20, height: 20)
                 .scaleEffect(showPlayerControls || isDragging ? 1 : 0.001, anchor: progress * videoSize.width > 15 ? .center : .leading)
                 .frame(width: 50, height: 50)
                 .contentShape(Rectangle())
@@ -230,7 +221,7 @@ struct SeekVideoPlayer: View {
                         })
                 )
                 .offset(x: progress * videoSize.width > 15 ? -15 : 0)
-                .frame(width: 15, height: 15)
+                .frame(width: 20, height: 20)
         }
         
     }

@@ -13,26 +13,27 @@ struct PostView: View {
     @State var isPlaying: Bool = false
     @Environment(\.dismiss) var dismiss
     let post: Post
-    @StateObject private var vm: VideoSeekBarViewModel
-    @StateObject private var playerManager: AVPlayerManager
     
     init(post: Post) {
         self.post = post
-        _vm = StateObject(wrappedValue: VideoSeekBarViewModel(player: post.player!))
-        _playerManager = StateObject(wrappedValue: AVPlayerManager(player: post.player!))
     }
     
-    
     var body: some View {
-        
-        ZStack{
-            VStack{
-                if let player = post.player {
-                    PostVideoPlayer(playerManager: playerManager, isPlaying: $isPlaying)
+        GeometryReader{
+            let size = $0.size
+            ZStack{
+                VStack(spacing: 0){
+                    if let player = post.player {
+                        SeekVideoPlayer(size: size, player: player, isPlaying: $isPlaying)
+                            .ignoresSafeArea(.all)
+                    } else {
+                        if #available(iOS 17.0, *) {
+                            ContentUnavailableView("기록을 찾지 못했어요", systemImage: "star.slash")
+                        } else {
+                            UnavailableView()
+                        }
+                    }
                 }
-                
-                
-                VideoSeekBar(vm: vm, isPlaying: $isPlaying)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -50,14 +51,30 @@ struct PostView: View {
             }
         }
         .onAppear{
-            isPlaying = true
-            playerManager.play()
+            if let player = post.player {
+                player.play()
+                isPlaying = true
+            }
         }
         .onDisappear{
-            isPlaying = false
-            playerManager.pause()
+            if let player = post.player{
+                player.pause()
+                isPlaying = false
+            }
         }
-       
+        
+    }
+    
+    @ViewBuilder
+    private func UnavailableView() -> some View {
+        VStack(spacing: 12){
+            Image(systemName: "star.slash")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+            Text("기록을 찾지 못했어요")
+                .fontWeight(.bold)
+        }
     }
 }
 
