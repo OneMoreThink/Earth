@@ -249,7 +249,3 @@ struct SeekVideoPlayer: View {
     }
     
 }
-
-#Preview {
-    TempView()
-}
