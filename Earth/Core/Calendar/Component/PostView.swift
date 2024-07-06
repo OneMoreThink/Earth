@@ -14,6 +14,7 @@ struct PostView: View {
     @Environment(\.dismiss) var dismiss
     let post: Post
     
+    let postService = PostService.shared
     @State private var isAlertPresented = false
     
     init(post: Post) {
@@ -60,6 +61,7 @@ struct PostView: View {
             
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
+                    postService.deletePost(post: post)
                     isAlertPresented.toggle()
                 }, label: {
                     Image(systemName: "star.slash")
