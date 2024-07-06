@@ -14,6 +14,8 @@ struct PostView: View {
     @Environment(\.dismiss) var dismiss
     let post: Post
     
+    @State private var isSheetPresented = false
+    
     init(post: Post) {
         self.post = post
     }
@@ -35,6 +37,21 @@ struct PostView: View {
                     }
                 }
             }
+            .confirmationDialog("정말로 삭제하시겠습니까?", isPresented: $isSheetPresented) {
+                Button(role: .destructive) {
+                    
+                } label: {
+                    Text("삭제")
+                }
+                
+                Button(role: .cancel) {
+                    
+                } label: {
+                    Text("취소")
+                }
+
+
+            }
         }
         .navigationBarBackButtonHidden(true)
         .toolbar{
@@ -47,6 +64,15 @@ struct PostView: View {
                         Text("뒤로")
                     }
                     .foregroundStyle(.princeYellow)
+                })
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {
+                    isSheetPresented.toggle()
+                }, label: {
+                    Image(systemName: "star.slash")
+                        .foregroundStyle(.red)
                 })
             }
         }
