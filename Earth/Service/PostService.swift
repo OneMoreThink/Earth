@@ -51,21 +51,24 @@ class PostService {
         
         if let videoUrl = fileManager.moveFile(from: srcURL, to: destFileName){
             coreManager.createPost(videoUrl: videoUrl)
-            
-//            // 달력상에서 여러 날짜에 영상을 넣어보기 위해 randomDate를 이용해 넣기 
-//            let formatter = DateFormatter()
-//            formatter.dateFormat = "yyyy-MM-dd"
-//            if let startDate = formatter.date(from: "2024-05-01"), let endDate = formatter.date(from: "2024-07-31") {
-//                let randomDate = randomDateBetween(start: startDate, end: endDate)
-//                coreManager.createPost(videoUrl: videoUrl, date: randomDate)
-//            } else {
-//                print("Failed to create date range")
-//            }
-//            
         }
     }
     
-    func randomDateBetween(start: Date, end: Date) -> Date {
+    func createNewPostWithRandomDate(from srcURL: URL, to destFileName: String){
+        
+        if let videoUrl = fileManager.moveFile(from: srcURL, to: destFileName){
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            if let startDate = formatter.date(from: "2024-06-01"), let endDate = formatter.date(from: "2024-08-31") {
+                let randomDate = randomDateBetween(start: startDate, end: endDate)
+                coreManager.createPost(videoUrl: videoUrl, date: randomDate)
+            } else {
+                print("Failed to create date range")
+            }
+        }
+    }
+    
+    private func randomDateBetween(start: Date, end: Date) -> Date {
         let timeInterval = end.timeIntervalSince(start)
         let randomInterval = TimeInterval.random(in: 0..<timeInterval)
         return start.addingTimeInterval(randomInterval)

@@ -109,6 +109,8 @@ extension CameraViewModel: AVCaptureFileOutputRecordingDelegate {
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
         // 녹화 완료 처리
         postService.createNewPost(from: outputFileURL, to: outputFileURL.lastPathComponent)
+        // text method
+        //postService.createNewPostWithRandomDate(from: outputFileURL, to: outputFileURL.lastPathComponent)
         print("녹화를 종료합니다")
     }
 }

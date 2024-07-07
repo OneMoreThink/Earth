@@ -67,6 +67,7 @@ struct RecordingView: View {
                     )
                     .frame(height: 58)
                     .padding(.bottom, 40)
+                    .animation(.easeInOut(duration: 0.3), value: cameraVm.isRecording)
                 })
                     
                 

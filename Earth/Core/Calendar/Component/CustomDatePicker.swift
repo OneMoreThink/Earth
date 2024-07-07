@@ -63,9 +63,6 @@ struct CustomDatePicker: View {
             vm.selectedDate = vm.getCurrentMonth()
             vm.fetchSelectedMonthPosts(date: vm.selectedDate)
         }
-        .onAppear{
-            //vm.reloadCalendar()
-        }
         
     }
     
