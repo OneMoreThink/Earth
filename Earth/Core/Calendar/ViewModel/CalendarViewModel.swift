@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 
 class CalendarViewModel: ObservableObject {
@@ -34,8 +35,22 @@ class CalendarViewModel: ObservableObject {
     }
     
     @objc private func didReceiveDataSaveNotification(_ notification: Notification) {
-        addToMonth = 0
-        fetchSelectedMonthPosts(date: .now)
+        
+        guard let userInfo = notification.userInfo else { return }
+        // 새로운 일기를 작성했을 때는 오늘이 있는 날로 달력을 이동한 후에
+        // 이번달에 대한 일기 업데이트
+        // addToMonth만 옮기면 DatePicker에서 onChange를 통해 달력 업데이트 호출
+        if let inserts = userInfo[NSInsertedObjectsKey] as? Set<NSManagedObject>, !inserts.isEmpty {
+            addToMonth = 0
+            fetchSelectedMonthPosts(date: .now)
+            
+        }
+        
+        // 일기를 삭제했을 때는 달은 현재 위치를 유지하고 현재 selectedDate에대해 다시 fetch
+        if let deletes = userInfo[NSDeletedObjectsKey] as? Set<NSManagedObject>, !deletes.isEmpty {
+            fetchSelectedMonthPosts(date: selectedDate)
+        }
+        
     }
     
     func fetchSelectedMonthPosts(date: Date) {

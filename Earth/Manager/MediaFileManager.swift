@@ -51,7 +51,13 @@ class MediaFileManager {
     
     func deleteFile(fileName: String){
 
-        let fileURL = documentDirectory.appendingPathComponent(fileName)
+        let fileURL = URL(fileURLWithPath: fileName)
+        
+        if !FileManager.default.fileExists(atPath: fileURL.path) {
+            print("삭제하려는 파일이 존재하지 않습니다: \(fileURL.path)")
+            return
+        }
+        
         do {
             try FileManager.default.removeItem(at: fileURL)
             print("파일 삭제 성공")
