@@ -11,7 +11,6 @@ import AVFoundation
 class CameraViewModel: NSObject, ObservableObject {
     
     @Published var session = AVCaptureSession()
-    @Published var alert = false
     @Published var output = AVCaptureMovieFileOutput()
     @Published var preview: AVCaptureVideoPreviewLayer!
     @Published var isRecording = false

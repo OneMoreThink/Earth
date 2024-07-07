@@ -27,6 +27,9 @@ struct RecordingView: View {
                 
                 HStack{
                     Button(action: {
+                        if cameraVm.isRecording{
+                            cameraVm.isRecording = false
+                        }
                         showNewPostModal = false
                     }, label: {
                         Image(systemName: "xmark")
@@ -74,13 +77,6 @@ struct RecordingView: View {
             }
             
             
-        }
-        // MARK: 현재 cameraVm.alert에 접근하여 제어하는 요소가 없음
-        .alert(isPresented: $cameraVm.alert){
-            Alert(
-                title: Text("카메라와 마이크 권한이 없습니다"),
-                message: Text("영상일지를 남기기 위해서 설정에서 권한을 주세요"),
-                dismissButton: .default(Text("OK")))
         }
         .onChange(of: cameraVm.isLoading) { newValue in
             if !newValue {
