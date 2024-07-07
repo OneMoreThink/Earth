@@ -24,7 +24,7 @@ struct EmptyPostView: View {
                     .padding(.bottom, 8)
                     .shadow(radius: 8)
                 
-                Text("첫 지구 여행기를 남겨보세요")
+                Text(" + 버튼을 눌러 \n 첫 지구 여행기를 남겨보세요")
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundStyle(.black)
