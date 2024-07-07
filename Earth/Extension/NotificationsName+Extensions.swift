@@ -10,4 +10,5 @@ import Foundation
 extension Notification.Name {
     static let didSaveContext = Notification.Name("didSaveContext")
     static let didReloadPosts = Notification.Name("didReloadPosts")
+    static let willSaveContext = Notification.Name("willSaveContext")
 }

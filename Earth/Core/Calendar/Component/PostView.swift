@@ -39,8 +39,8 @@ struct PostView: View {
                 }
             }
             .alert(isPresented: $isAlertPresented){
-                Alert(title: Text("삭제 확인"), message: Text("한 순간을 떠나보낼까요?"), primaryButton: .destructive(Text("삭제"), action: {
-                    
+                Alert(title: Text("삭제 확인"), message: Text("이 순간을 떠나보낼까요?"), primaryButton: .destructive(Text("삭제"), action: {
+                    postService.deletePost(post: post)
                     dismiss()
                 }), secondaryButton: .cancel(Text("취소")))
             }
@@ -61,7 +61,6 @@ struct PostView: View {
             
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
-                    postService.deletePost(post: post)
                     isAlertPresented.toggle()
                 }, label: {
                     Image(systemName: "star.slash")
