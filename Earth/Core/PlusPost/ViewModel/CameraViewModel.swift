@@ -78,6 +78,7 @@ class CameraViewModel: NSObject, ObservableObject {
     }
     
     func startRecording(){
+        AudioServicesPlaySystemSound(SystemSoundID(1113))
         DispatchQueue.main.async{
             guard !self.isRecording else {return}
             let outputPath = FileManager.default.temporaryDirectory.appendingPathComponent("\(UUID().uuidString).mov")
@@ -87,6 +88,7 @@ class CameraViewModel: NSObject, ObservableObject {
     }
     
     func stopRecording(){
+        AudioServicesPlaySystemSound(SystemSoundID(1114))
         DispatchQueue.main.async{
             guard self.isRecording else {return}
             self.output.stopRecording() // output.stopRecording이 delegate의 fileOutput을 호출 
