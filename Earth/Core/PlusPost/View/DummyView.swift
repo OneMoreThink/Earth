@@ -22,7 +22,7 @@ struct DummyView: View {
         .alert(isPresented: $showingPermissionAlert){
             Alert(
                 title: Text("권한 필요"),
-                message: Text("생존 일지를 남기기 위해서는 카메라 및 마이크 권한이 필요합니다. 설정에서 권한을 허용해주세요"),
+                message: Text("여행 일지를 남기기 위해서는 카메라 및 마이크 권한이 필요합니다. 설정에서 권한을 허용해주세요"),
                 primaryButton: .default(Text("설정으로 이동"), action: openAppSettings),
                 secondaryButton: .cancel(Text("취소"))
             )

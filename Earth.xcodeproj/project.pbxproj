@@ -568,8 +568,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permissions for taking videos";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone permissions for taking videos";
+				INFOPLIST_KEY_NSCameraUsageDescription = "여행 일지를 남기기 위해 카메라 접근 권한이 필요합니다. 영상을 촬영하여 소중한 순간을 기록하세요.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "행 일지를 남기기 위해 마이크 접근 권한이 필요합니다. 목소리로 생생한 여행 경험을 기록하세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -607,8 +607,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permissions for taking videos";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone permissions for taking videos";
+				INFOPLIST_KEY_NSCameraUsageDescription = "여행 일지를 남기기 위해 카메라 접근 권한이 필요합니다. 영상을 촬영하여 소중한 순간을 기록하세요.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "행 일지를 남기기 위해 마이크 접근 권한이 필요합니다. 목소리로 생생한 여행 경험을 기록하세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
