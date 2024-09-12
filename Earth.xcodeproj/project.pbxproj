@@ -40,7 +40,6 @@
 		AF8350DA2C36E0120040DC4C /* TempVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8350D92C36E0120040DC4C /* TempVideoPlayer.swift */; };
 		AF9F39032BC51A6A00F4988A /* EarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F39022BC51A6A00F4988A /* EarthApp.swift */; };
 		AF9F39072BC51A6C00F4988A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39062BC51A6C00F4988A /* Assets.xcassets */; };
-		AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */; };
 		AF9F390F2BC51A6C00F4988A /* Earth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF9F390D2BC51A6C00F4988A /* Earth.xcdatamodeld */; };
 		AF9F391D2BC51EF900F4988A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F391C2BC51EF900F4988A /* MainTabView.swift */; };
 		AFF51C452C0D6888001F3973 /* PostLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF51C442C0D6888001F3973 /* PostLabel.swift */; };
@@ -81,7 +80,6 @@
 		AF9F38FF2BC51A6A00F4988A /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9F39022BC51A6A00F4988A /* EarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthApp.swift; sourceTree = "<group>"; };
 		AF9F39062BC51A6C00F4988A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9F390E2BC51A6C00F4988A /* Earth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Earth.xcdatamodel; sourceTree = "<group>"; };
 		AF9F391C2BC51EF900F4988A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		AFF51C442C0D6888001F3973 /* PostLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLabel.swift; sourceTree = "<group>"; };
@@ -242,17 +240,8 @@
 				AF9F39162BC51E1F00F4988A /* Model */,
 				AF9F390D2BC51A6C00F4988A /* Earth.xcdatamodeld */,
 				AF9F39062BC51A6C00F4988A /* Assets.xcassets */,
-				AF9F39082BC51A6C00F4988A /* Preview Content */,
 			);
 			path = Earth;
-			sourceTree = "<group>";
-		};
-		AF9F39082BC51A6C00F4988A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				AF9F39092BC51A6C00F4988A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		AF9F39152BC51E0C00F4988A /* App */ = {
@@ -384,7 +373,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9F390A2BC51A6C00F4988A /* Preview Assets.xcassets in Resources */,
 				AF9F39072BC51A6C00F4988A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,7 +552,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Earth/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -606,7 +594,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Earth/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
